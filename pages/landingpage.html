@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career Anna</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(ellipse at top, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+    }
+
+    .header {
+      background: linear-gradient(-45deg, #00c6ff, #0072ff, #00c6ff, #0072ff);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      position: relative;
+      max-width: 100%;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin: 0;
+      display: inline-block;
+      position: relative;
+    }
+
+    .header h1::after {
+      content: "🚀";
+      position: absolute;
+      right: -45px;
+      animation: floatRocket 2s ease-in-out infinite;
+    }
+
+    @keyframes floatRocket {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .header p {
+      font-size: 1rem;
+      margin-top: 10px;
+      font-weight: 400;
+      color: #e8f0fe;
+    }
+
+    .header p span {
+      color: #ffffff;
+      font-weight: 600;
+      background: rgba(255,255,255,0.08);
+      padding: 4px 8px;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .header p span:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .container {
+      padding: 50px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .career-card {
+      background: #141e30;
+      border: 2px solid #00c6ff66;
+      border-radius: 18px;
+      padding: 25px;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
+      transition: transform 0.4s, box-shadow 0.4s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .career-card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(120deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+      transform: rotate(45deg);
+      animation: shine 4s linear infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        transform: translate(-100%, -100%) rotate(45deg);
+      }
+      100% {
+        transform: translate(100%, 100%) rotate(45deg);
+      }
+    }
+
+    .career-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    }
+
+    .career-card h2 {
+      color: #00e5ff;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .career-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background: #101820;
+      color: #888;
+      border-top: 1px solid #00c6ff44;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Career Anna</h1>
+    <p><span>Pilot your journey</span>. Build your future.</p>
+  </div>
+
+  <div class="container">
+    <div class="career-card" onclick="navigateTo('pages/appdevelopmet.html')" style="cursor: pointer;">
+      <h2>📱 App Developer</h2><p>Build mobile apps using Java, Kotlin, Flutter, or Swift.</p>
+    </div>
+    <div class="career-card"  onclick="navigateTo1('pages/webdevelopment.html')" style="cursor: pointer;">
+      <h2>🌐 Web Developer</h2><p>Design responsive websites using HTML, CSS, JS, React & more.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('Data Scientist')">
+      <h2>📊 Data Scientist</h2><p>Analyze data and make predictions using Python and ML tools.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('AI/ML Engineer')">
+      <h2>🤖 AI/ML Engineer</h2><p>Create intelligent systems using AI and machine learning models.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('Cybersecurity Expert')">
+      <h2>🛡️ Cybersecurity</h2><p>Protect systems from digital attacks and secure networks.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('Cloud Engineer')">
+      <h2>☁️ Cloud Engineer</h2><p>Work with AWS, Azure, GCP to manage cloud infrastructure.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('UI/UX Designer')">
+      <h2>🎨 UI/UX Designer</h2><p>Design user interfaces and improve digital product experience.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('Game Developer')">
+      <h2>🎮 Game Developer</h2><p>Develop games using Unity, Unreal Engine, and C# or C++.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('Product Manager')">
+      <h2>📌 Product Manager</h2><p>Lead product strategy, market fit, and user needs.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('DevOps Engineer')">
+      <h2>⚙️ DevOps Engineer</h2><p>Automate deployments, CI/CD, and manage infrastructure.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('Blockchain Developer')">
+      <h2>🔗 Blockchain Dev</h2><p>Build decentralized apps and smart contracts.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('AR/VR Developer')">
+      <h2>🕶️ AR/VR Developer</h2><p>Create immersive XR experiences using ARKit, Unity, and 3D tools.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('Embedded Engineer')">
+      <h2>📟 Embedded Engineer</h2><p>Write firmware for hardware devices using C/C++ and RTOS.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('Entrepreneur')">
+      <h2>🚀 Entrepreneur</h2><p>Start your own company and build tech products that scale.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('Robotics Engineer')">
+      <h2>🤖 Robotics Engineer</h2><p>Design, build, and program intelligent robotic systems.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('QA Engineer')">
+      <h2>🧪 QA Engineer</h2><p>Test software and ensure product quality using automation tools.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('Database Administrator')">
+      <h2>💾 Database Admin</h2><p>Manage and optimize databases using SQL, MongoDB, Oracle, etc.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('Networking Specialist')">
+      <h2>📡 Network Engineer</h2><p>Design and maintain LAN/WAN infrastructure and protocols.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('System Administrator')">
+      <h2>🖥️ System Admin</h2><p>Configure and maintain computer systems and servers.</p>
+    </div>
+    <div class="career-card" onclick="openRoadmap('Tech Content Creator')">
+      <h2>🎤 Tech Content Creator</h2><p>Create engaging tech content on YouTube, blogs, or Instagram.</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Career Anna | Guiding Engineering Students to Future Careers
+  </footer>
+
+  <script>
+    function navigateTo(pages) {
+      window.location.href = pages;
+    }
+    function navigateTo1(pages) {
+      window.location.href = pages;
+    }
+  </script>
+</body>
+</html>
