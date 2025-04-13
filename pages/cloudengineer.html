@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AI & ML Engineer - Career Anna</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <title>Cloud Engineer - Career Anna</title>
   <style>
-    * { box-sizing: border-box; scroll-behavior: smooth; }
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -14,7 +18,11 @@
       color: #e0e0e0;
     }
 
-    .container { padding: 40px 20px; max-width: 1100px; margin: auto; }
+    .container {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
     h1 {
       text-align: center;
@@ -28,9 +36,8 @@
       padding: 50px 20px;
       background: #0c101b;
       color: #00f0ff;
+      margin-bottom: 50px;
     }
-
-    section:hover { transform: translateY(-4px); }
 
     h2 {
       text-align: center;
@@ -68,7 +75,9 @@
       z-index: 2;
     }
 
-    .step.right { justify-content: flex-end; }
+    .step.right {
+      justify-content: flex-end;
+    }
 
     .step .icon {
       background: #101828;
@@ -106,10 +115,12 @@
         align-items: center;
         text-align: center;
       }
-
-      .step.right { justify-content: center; }
-
-      .step .content { width: 90%; }
+      .step.right {
+        justify-content: center;
+      }
+      .step .content {
+        width: 90%;
+      }
     }
 
     .links a {
@@ -144,7 +155,9 @@
       transition: transform 0.3s;
     }
 
-    .video-card:hover { transform: scale(1.05); }
+    .video-card:hover {
+      transform: scale(1.05);
+    }
 
     iframe {
       display: block;
@@ -154,11 +167,28 @@
     }
 
     @media (max-width: 768px) {
-      iframe { width: 100%; height: 200px; }
-      .video-card { width: 100%; }
+      iframe {
+        width: 100%;
+        height: 200px;
+      }
+      .video-card {
+        width: 100%;
+      }
     }
 
-    a { color: #00ffff; }
+    ul {
+      padding-left: 20px;
+      color: #fff;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00ffff;
+    }
 
     .back-home-btn {
       display: inline-block;
@@ -182,30 +212,39 @@
 </head>
 <body>
   <div class="container">
-    <h1>AI & ML Engineer 🤖</h1>
+    <h1>Cloud Engineer ☁️</h1>
 
     <section>
       <h2>📍 Roadmap</h2>
       <div class="graphic-roadmap">
         <div class="step left">
-          <div class="icon"><img src="https://img.icons8.com/color/96/python--v1.png" alt="Python"></div>
-          <div class="content">Master Python & Libraries (NumPy, Pandas)</div>
+          <div class="icon"><img src="https://img.icons8.com/color/96/linux.png" alt="Linux"></div>
+          <div class="content">Learn Linux basics & networking concepts</div>
         </div>
+
         <div class="step right">
-          <div class="icon"><img src="https://img.icons8.com/fluency/96/statistics.png" alt="Stats"></div>
-          <div class="content">Learn Math, Linear Algebra & Probability</div>
+          <div class="icon"><img src="https://img.icons8.com/color/96/aws.png" alt="AWS"></div>
+          <div class="content">Master cloud platforms (AWS, Azure, GCP)</div>
         </div>
+
         <div class="step left">
-          <div class="icon"><img src="https://img.icons8.com/color/96/artificial-intelligence.png" alt="ML"></div>
-          <div class="content">Understand Machine Learning Algorithms</div>
+          <div class="icon"><img src="https://img.icons8.com/color/96/docker.png" alt="Docker"></div>
+          <div class="content">Get hands-on with Docker & Kubernetes</div>
         </div>
+
         <div class="step right">
-          <div class="icon"><img src="https://img.icons8.com/color/96/neural-network.png" alt="DL"></div>
-          <div class="content">Dive into Deep Learning & Neural Nets</div>
+          <div class="icon"><img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/000000/external-terraform-an-open-source-software-tool-used-for-infrastructure-devops-color-tal-revivo.png" alt="Terraform"></div>
+          <div class="content">Explore Infrastructure as Code (Terraform)</div>
         </div>
+
         <div class="step left">
-          <div class="icon"><img src="https://img.icons8.com/color/96/brain.png" alt="Projects"></div>
-          <div class="content">Build Projects & Deploy Models</div>
+          <div class="icon"><img src="https://img.icons8.com/color/96/monitor.png" alt="Monitoring"></div>
+          <div class="content">Understand monitoring & CI/CD pipelines</div>
+        </div>
+
+        <div class="step right">
+          <div class="icon"><img src="https://img.icons8.com/fluency/96/deploy.png" alt="Deploy"></div>
+          <div class="content">Work on deployment & real-world projects</div>
         </div>
       </div>
     </section>
@@ -213,51 +252,56 @@
     <section>
       <h2>🎓 Free Courses</h2>
       <div class="links">
-        <a href="https://www.freecodecamp.org/learn/machine-learning-with-python/" target="_blank">FreeCodeCamp - ML</a>
-        <a href="https://developers.google.com/machine-learning/crash-course" target="_blank">Google ML Crash Course</a>
-        <a href="https://www.kaggle.com/learn/intro-to-machine-learning" target="_blank">Kaggle ML Course</a>
-        <a href="https://www.coursera.org/learn/machine-learning" target="_blank">Coursera - Andrew Ng</a>
-        <a href="https://www.udacity.com/course/intro-to-artificial-intelligence--cs271" target="_blank">Udacity - AI Intro</a>
+        <a href="https://www.udemy.com/course/aws-certified-cloud-practitioner/" target="_blank">AWS Cloud Practitioner - Udemy</a>
+        <a href="https://www.youtube.com/playlist?list=PL2cQvNV2gTnZLJcOJvR6h3V2Y_1xk0lO0" target="_blank">GCP Crash Course - YouTube</a>
+        <a href="https://www.udacity.com/course/cloud-dev-ops-nanodegree--nd9991" target="_blank">Cloud DevOps - Udacity</a>
       </div>
     </section>
 
     <section>
       <h2>🎥 YouTube Videos</h2>
       <div class="video-container">
-        <div class="video-card"><iframe src="https://www.youtube.com/embed/GwIo3gDZCVQ" allowfullscreen></iframe></div>
-        <div class="video-card"><iframe src="https://www.youtube.com/embed/aircAruvnKk" allowfullscreen></iframe></div>
-        <div class="video-card"><iframe src="https://www.youtube.com/embed/ukzFI9rgwfU" allowfullscreen></iframe></div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/WVFZKZKo1cE" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/JIbIYCM48to" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/Ry5np3mUWXY" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
 
     <section>
       <h2>💡 Sample Projects</h2>
       <ul>
-        <li>🤖 Basic: Spam Classifier, House Price Prediction</li>
-        <li>📈 Intermediate: Chatbot, Face Recognition App</li>
-        <li>🧠 Advanced: Self-driving Simulation, NLP Model Deployment</li>
+        <li>☁️ Setup a static website on AWS S3 with CloudFront</li>
+        <li>📦 Build a CI/CD pipeline using GitHub Actions + Docker + ECS</li>
+        <li>🔧 Automate infrastructure with Terraform for a 3-tier architecture</li>
       </ul>
     </section>
 
     <section>
       <h2>📄 Resume Tips</h2>
       <ul>
-        <li>📌 Mention ML/DL frameworks (TensorFlow, PyTorch, Scikit-learn)</li>
-        <li>🚀 Highlight deployment skills (Flask, FastAPI, Docker)</li>
-        <li>📊 Include project metrics (accuracy, F1 score, inference time)</li>
+        <li>📌 Add certifications (AWS/GCP/Azure)</li>
+        <li>🛠 Showcase DevOps tools (Docker, K8s, Jenkins)</li>
+        <li>🔗 Include GitHub repo links with IaC & deployment examples</li>
       </ul>
     </section>
 
     <section>
-      <h2>👩‍🏫 Industry Mentors</h2>
+      <h2>👨‍💼 Industry Mentors</h2>
       <ul>
-        <li><a href="https://www.linkedin.com/in/andrewng/" target="_blank">Andrew Ng - Co-founder, Coursera</a></li>
-        <li><a href="https://www.linkedin.com/in/krishnaik06/" target="_blank">Krish Naik - ML Expert</a></li>
-        <li><a href="https://www.linkedin.com/in/sudharshan-engineer/" target="_blank">Sudharshan M - AI @ TCS</a></li>
+        <li><a href="https://www.linkedin.com/in/adrianco/" target="_blank">Adrian Cockcroft - AWS</a></li>
+        <li><a href="https://www.linkedin.com/in/kelsey-hightower-abe1822b/" target="_blank">Kelsey Hightower - Kubernetes</a></li>
+        <li><a href="https://www.linkedin.com/in/stephane-maarek/" target="_blank">Stephane Maarek - Cloud Architect</a></li>
       </ul>
     </section>
 
     <a href="../landingpage.html" class="back-home-btn">🏠 Back to Home</a>
+
   </div>
 </body>
 </html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>UI/UX Designer - Career Anna</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #0c0f1a;
+      color: #e0e0e0;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #00f0ff;
+      margin-bottom: 50px;
+      text-shadow: 0 0 10px #00f0ff;
+    }
+
+    section {
+      padding: 50px 20px;
+      background: #0c101b;
+      color: #00f0ff;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #00f0ff;
+      margin-bottom: 60px;
+    }
+
+    /* ROADMAP STYLES */
+    .roadmap-container {
+      position: relative;
+      margin: 60px auto;
+      width: 90%;
+      max-width: 900px;
+    }
+
+    .roadmap-line {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 6px;
+      height: 100%;
+      background: #00f0ff;
+      transform: translateX(-50%);
+      z-index: 0;
+      border-radius: 3px;
+      animation: pulse 2s infinite;
+    }
+
+    .roadmap-item {
+      position: relative;
+      width: 50%;
+      padding: 20px 40px;
+      box-sizing: border-box;
+    }
+
+    .roadmap-item.left {
+      left: 0;
+      text-align: right;
+    }
+
+    .roadmap-item.right {
+      left: 50%;
+      text-align: left;
+    }
+
+    .roadmap-item .content-box {
+      background: #101828;
+      color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #00f0ff;
+      position: relative;
+    }
+
+    .roadmap-item.left .content-box::after,
+    .roadmap-item.right .content-box::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 12px;
+      height: 12px;
+      background: #00f0ff;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+
+    .roadmap-item.left .content-box::after {
+      right: -30px;
+    }
+
+    .roadmap-item.right .content-box::after {
+      left: -30px;
+    }
+
+    .roadmap-item h3 {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+      color: #00f0ff;
+    }
+
+    @media (max-width: 768px) {
+      .roadmap-item,
+      .roadmap-item.left,
+      .roadmap-item.right {
+        width: 100%;
+        left: 0;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .roadmap-line {
+        left: 10px;
+      }
+
+      .roadmap-item .content-box {
+        margin-left: 30px;
+      }
+
+      .roadmap-item.left .content-box::after,
+      .roadmap-item.right .content-box::after {
+        left: -20px;
+        right: auto;
+      }
+    }
+
+    /* OTHER SECTION STYLES */
+    .links a {
+      display: inline-block;
+      background: #00f0ff;
+      color: white;
+      padding: 10px 18px;
+      margin: 6px 8px 6px 0;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+
+    .links a:hover {
+      background: #00c0cc;
+      transform: scale(1.05);
+    }
+
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .video-card {
+      background: #1a1f30;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .video-card:hover {
+      transform: scale(1.05);
+    }
+
+    iframe {
+      display: block;
+      width: 320px;
+      height: 180px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        width: 100%;
+        height: 200px;
+      }
+      .video-card {
+        width: 100%;
+      }
+    }
+
+    ul {
+      padding-left: 20px;
+      color: #fff;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00f0ff;
+    }
+
+    .back-home-btn {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 12px 25px;
+      background-color: #00f0ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00f0ff;
+      transition: all 0.3s ease;
+    }
+
+    .back-home-btn:hover {
+      background-color: #00d6e6;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00f0ff;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #00f0ff; }
+      50% { box-shadow: 0 0 25px #00f0ff; }
+      100% { box-shadow: 0 0 10px #00f0ff; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>UI/UX Designer 🎨</h1>
+
+    <section>
+      <h2>📍 Roadmap</h2>
+      <div class="roadmap-container">
+        <div class="roadmap-line"></div>
+
+        <div class="roadmap-item left">
+          <div class="content-box">
+            <h3>🎨 Design Principles</h3>
+            <p>Learn Color Theory, Typography, Layout & Spacing</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item right">
+          <div class="content-box">
+            <h3>🛠 Tools Mastery</h3>
+            <p>Master Figma, Adobe XD, or Sketch for UI Design</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item left">
+          <div class="content-box">
+            <h3>🧩 Wireframing</h3>
+            <p>Learn how to create wireframes and interactive prototypes</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item right">
+          <div class="content-box">
+            <h3>🧠 User Research</h3>
+            <p>Understand how to conduct user interviews and usability tests</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item left">
+          <div class="content-box">
+            <h3>💻 HTML/CSS Basics</h3>
+            <p>Understand front-end code to better design for devs</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item right">
+          <div class="content-box">
+            <h3>📁 Build Portfolio</h3>
+            <p>Create UI/UX case studies and host them online</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎓 Free Courses</h2>
+      <div class="links">
+        <a href="https://www.coursera.org/learn/ui-ux-design" target="_blank">UI/UX Design - Coursera</a>
+        <a href="https://www.youtube.com/playlist?list=PLW-zSkCnZ-gC0C1Wi-jw6X_QuKreQop95" target="_blank">Figma Tutorial - YT</a>
+        <a href="https://www.interaction-design.org/" target="_blank">Interaction Design Foundation</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎥 YouTube Videos</h2>
+      <div class="video-container">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/3YcL5Pq2bFc" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/jwCmIBJ8Jtc" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/FTFaQWZBqQ8" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>💡 Sample Projects</h2>
+      <ul>
+        <li>📱 Redesign a popular mobile app (e.g. Spotify, WhatsApp)</li>
+        <li>🌐 Design a landing page for a fictional product</li>
+        <li>🧠 Conduct UX research for a student productivity app</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📄 Resume Tips</h2>
+      <ul>
+        <li>🎯 Showcase a visually creative resume (try Canva/Figma)</li>
+        <li>📂 Add a portfolio link with case studies</li>
+        <li>🛠 Mention tools used and design thinking process</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>👩‍💼 Industry Mentors</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/joewrightdesign/" target="_blank">Joe Wright - Sr. UX Designer</a></li>
+        <li><a href="https://www.linkedin.com/in/julie-zhuo-07b4b5/" target="_blank">Julie Zhuo - Author & Product Designer</a></li>
+        <li><a href="https://www.linkedin.com/in/awais/" target="_blank">Awais Aftab - UX at Meta</a></li>
+      </ul>
+    </section>
+
+    <a href="../landingpage.html" class="back-home-btn">🏠 Back to Home</a>
+  </div>
+</body>
+</html>

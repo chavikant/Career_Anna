@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AI & ML Engineer - Career Anna</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <title>DevOps Engineer - Career Anna</title>
   <style>
-    * { box-sizing: border-box; scroll-behavior: smooth; }
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -14,23 +18,26 @@
       color: #e0e0e0;
     }
 
-    .container { padding: 40px 20px; max-width: 1100px; margin: auto; }
+    .container {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
     h1 {
       text-align: center;
       font-size: 3rem;
-      color: #00ffff;
+      color: #00f0ff;
       margin-bottom: 50px;
-      text-shadow: 0 0 10px #00ffff;
+      text-shadow: 0 0 10px #00f0ff;
     }
 
     section {
       padding: 50px 20px;
       background: #0c101b;
       color: #00f0ff;
+      margin-bottom: 50px;
     }
-
-    section:hover { transform: translateY(-4px); }
 
     h2 {
       text-align: center;
@@ -68,7 +75,9 @@
       z-index: 2;
     }
 
-    .step.right { justify-content: flex-end; }
+    .step.right {
+      justify-content: flex-end;
+    }
 
     .step .icon {
       background: #101828;
@@ -106,26 +115,28 @@
         align-items: center;
         text-align: center;
       }
-
-      .step.right { justify-content: center; }
-
-      .step .content { width: 90%; }
+      .step.right {
+        justify-content: center;
+      }
+      .step .content {
+        width: 90%;
+      }
     }
 
     .links a {
       display: inline-block;
-      background: #00bfff;
+      background: #00f0ff;
       color: white;
       padding: 10px 18px;
       margin: 6px 8px 6px 0;
       text-decoration: none;
       border-radius: 8px;
       transition: 0.3s;
-      box-shadow: 0 0 10px #00bfff;
+      box-shadow: 0 0 10px #00f0ff;
     }
 
     .links a:hover {
-      background: #0099cc;
+      background: #00c8d7;
       transform: scale(1.05);
     }
 
@@ -140,11 +151,13 @@
       background: #1a1f30;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
       transition: transform 0.3s;
     }
 
-    .video-card:hover { transform: scale(1.05); }
+    .video-card:hover {
+      transform: scale(1.05);
+    }
 
     iframe {
       display: block;
@@ -154,11 +167,28 @@
     }
 
     @media (max-width: 768px) {
-      iframe { width: 100%; height: 200px; }
-      .video-card { width: 100%; }
+      iframe {
+        width: 100%;
+        height: 200px;
+      }
+      .video-card {
+        width: 100%;
+      }
     }
 
-    a { color: #00ffff; }
+    ul {
+      padding-left: 20px;
+      color: #fff;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00f0ff;
+    }
 
     .back-home-btn {
       display: inline-block;
@@ -174,7 +204,7 @@
     }
 
     .back-home-btn:hover {
-      background-color: #0ff;
+      background-color: #00c8d7;
       transform: scale(1.05);
       box-shadow: 0 0 20px #00f0ff;
     }
@@ -182,30 +212,34 @@
 </head>
 <body>
   <div class="container">
-    <h1>AI & ML Engineer 🤖</h1>
+    <h1>DevOps Engineer ⚙️</h1>
 
     <section>
       <h2>📍 Roadmap</h2>
       <div class="graphic-roadmap">
         <div class="step left">
-          <div class="icon"><img src="https://img.icons8.com/color/96/python--v1.png" alt="Python"></div>
-          <div class="content">Master Python & Libraries (NumPy, Pandas)</div>
+          <div class="icon"><img src="https://img.icons8.com/ios/100/server.png" alt="Linux"></div>
+          <div class="content">Start with Linux fundamentals and shell scripting</div>
         </div>
         <div class="step right">
-          <div class="icon"><img src="https://img.icons8.com/fluency/96/statistics.png" alt="Stats"></div>
-          <div class="content">Learn Math, Linear Algebra & Probability</div>
+          <div class="icon"><img src="https://img.icons8.com/ios/100/docker.png" alt="Docker"></div>
+          <div class="content">Learn Docker and container orchestration (Kubernetes)</div>
         </div>
         <div class="step left">
-          <div class="icon"><img src="https://img.icons8.com/color/96/artificial-intelligence.png" alt="ML"></div>
-          <div class="content">Understand Machine Learning Algorithms</div>
+          <div class="icon"><img src="https://img.icons8.com/ios/100/jenkins.png" alt="CI/CD"></div>
+          <div class="content">Understand CI/CD pipelines and Jenkins/GitHub Actions</div>
         </div>
         <div class="step right">
-          <div class="icon"><img src="https://img.icons8.com/color/96/neural-network.png" alt="DL"></div>
-          <div class="content">Dive into Deep Learning & Neural Nets</div>
+          <div class="icon"><img src="https://img.icons8.com/ios/100/cloud.png" alt="Cloud"></div>
+          <div class="content">Master AWS, Azure, or GCP for cloud deployments</div>
         </div>
         <div class="step left">
-          <div class="icon"><img src="https://img.icons8.com/color/96/brain.png" alt="Projects"></div>
-          <div class="content">Build Projects & Deploy Models</div>
+          <div class="icon"><img src="https://img.icons8.com/ios/100/monitor.png" alt="Monitoring"></div>
+          <div class="content">Set up monitoring using Prometheus, Grafana, ELK stack</div>
+        </div>
+        <div class="step right">
+          <div class="icon"><img src="https://img.icons8.com/ios/100/lock.png" alt="Security"></div>
+          <div class="content">Implement DevSecOps practices for secure infrastructure</div>
         </div>
       </div>
     </section>
@@ -213,47 +247,51 @@
     <section>
       <h2>🎓 Free Courses</h2>
       <div class="links">
-        <a href="https://www.freecodecamp.org/learn/machine-learning-with-python/" target="_blank">FreeCodeCamp - ML</a>
-        <a href="https://developers.google.com/machine-learning/crash-course" target="_blank">Google ML Crash Course</a>
-        <a href="https://www.kaggle.com/learn/intro-to-machine-learning" target="_blank">Kaggle ML Course</a>
-        <a href="https://www.coursera.org/learn/machine-learning" target="_blank">Coursera - Andrew Ng</a>
-        <a href="https://www.udacity.com/course/intro-to-artificial-intelligence--cs271" target="_blank">Udacity - AI Intro</a>
+        <a href="https://www.freecodecamp.org/news/learn-devops/" target="_blank">freeCodeCamp DevOps</a>
+        <a href="https://www.coursera.org/learn/introduction-devops" target="_blank">Coursera Intro to DevOps</a>
+        <a href="https://www.edx.org/learn/devops" target="_blank">edX DevOps Courses</a>
       </div>
     </section>
 
     <section>
       <h2>🎥 YouTube Videos</h2>
       <div class="video-container">
-        <div class="video-card"><iframe src="https://www.youtube.com/embed/GwIo3gDZCVQ" allowfullscreen></iframe></div>
-        <div class="video-card"><iframe src="https://www.youtube.com/embed/aircAruvnKk" allowfullscreen></iframe></div>
-        <div class="video-card"><iframe src="https://www.youtube.com/embed/ukzFI9rgwfU" allowfullscreen></iframe></div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/0yWAtQ6wYNM" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/0yfoMoKZzH8" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/VWf5C7udzy0" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
 
     <section>
       <h2>💡 Sample Projects</h2>
       <ul>
-        <li>🤖 Basic: Spam Classifier, House Price Prediction</li>
-        <li>📈 Intermediate: Chatbot, Face Recognition App</li>
-        <li>🧠 Advanced: Self-driving Simulation, NLP Model Deployment</li>
+        <li>📦 Set up a CI/CD pipeline using GitHub Actions and Docker</li>
+        <li>☁ Deploy a web app on AWS EC2 with NGINX reverse proxy</li>
+        <li>📈 Monitor a Node.js app with Prometheus and Grafana</li>
       </ul>
     </section>
 
     <section>
       <h2>📄 Resume Tips</h2>
       <ul>
-        <li>📌 Mention ML/DL frameworks (TensorFlow, PyTorch, Scikit-learn)</li>
-        <li>🚀 Highlight deployment skills (Flask, FastAPI, Docker)</li>
-        <li>📊 Include project metrics (accuracy, F1 score, inference time)</li>
+        <li>✅ Highlight automation and infrastructure-as-code skills</li>
+        <li>📊 Show improvements in deployment time, error rate, etc.</li>
+        <li>🔐 Include security awareness and compliance experience</li>
       </ul>
     </section>
 
     <section>
-      <h2>👩‍🏫 Industry Mentors</h2>
+      <h2>👨‍🏫 Industry Mentors</h2>
       <ul>
-        <li><a href="https://www.linkedin.com/in/andrewng/" target="_blank">Andrew Ng - Co-founder, Coursera</a></li>
-        <li><a href="https://www.linkedin.com/in/krishnaik06/" target="_blank">Krish Naik - ML Expert</a></li>
-        <li><a href="https://www.linkedin.com/in/sudharshan-engineer/" target="_blank">Sudharshan M - AI @ TCS</a></li>
+        <li><a href="https://www.linkedin.com/in/kelsey-hightower-0311b6/" target="_blank">Kelsey Hightower - Google Cloud</a></li>
+        <li><a href="https://www.linkedin.com/in/tonybai/" target="_blank">Tony Bai - DevOps Advocate</a></li>
+        <li><a href="https://www.linkedin.com/in/sara-morgan/" target="_blank">Sara Morgan - DevOps Coach</a></li>
       </ul>
     </section>
 

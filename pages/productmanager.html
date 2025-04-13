@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Web Development - Career Anna</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <title>Product Manager - Career Anna</title>
   <style>
-    /* same CSS as app development page */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
     * {
       box-sizing: border-box;
       scroll-behavior: smooth;
@@ -27,19 +27,16 @@
     h1 {
       text-align: center;
       font-size: 3rem;
-      color: #00ffff;
+      color: #00f0ff;
       margin-bottom: 50px;
-      text-shadow: 0 0 10px #00ffff;
+      text-shadow: 0 0 10px #00f0ff;
     }
 
     section {
       padding: 50px 20px;
       background: #0c101b;
       color: #00f0ff;
-    }
-
-    section:hover {
-      transform: translateY(-4px);
+      margin-bottom: 50px;
     }
 
     h2 {
@@ -118,11 +115,9 @@
         align-items: center;
         text-align: center;
       }
-
       .step.right {
         justify-content: center;
       }
-
       .step .content {
         width: 90%;
       }
@@ -130,18 +125,18 @@
 
     .links a {
       display: inline-block;
-      background: #00bfff;
+      background: #00f0ff;
       color: white;
       padding: 10px 18px;
       margin: 6px 8px 6px 0;
       text-decoration: none;
       border-radius: 8px;
       transition: 0.3s;
-      box-shadow: 0 0 10px #00bfff;
+      box-shadow: 0 0 10px #00f0ff;
     }
 
     .links a:hover {
-      background: #0099cc;
+      background: #00c8d7;
       transform: scale(1.05);
     }
 
@@ -156,7 +151,7 @@
       background: #1a1f30;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
       transition: transform 0.3s;
     }
 
@@ -176,14 +171,23 @@
         width: 100%;
         height: 200px;
       }
-
       .video-card {
         width: 100%;
       }
     }
 
+    ul {
+      padding-left: 20px;
+      color: #fff;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
     a {
-      color: #00ffff;
+      color: #00f0ff;
     }
 
     .back-home-btn {
@@ -200,7 +204,7 @@
     }
 
     .back-home-btn:hover {
-      background-color: #0ff;
+      background-color: #00c8d7;
       transform: scale(1.05);
       box-shadow: 0 0 20px #00f0ff;
     }
@@ -208,30 +212,34 @@
 </head>
 <body>
   <div class="container">
-    <h1>Web Development 🌐</h1>
+    <h1>Product Manager 🧠</h1>
 
     <section>
       <h2>📍 Roadmap</h2>
       <div class="graphic-roadmap">
         <div class="step left">
-          <div class="icon"><img src="https://img.icons8.com/color/96/html-5--v1.png" alt="HTML"></div>
-          <div class="content">Start with HTML, CSS & JavaScript</div>
+          <div class="icon"><img src="https://img.icons8.com/ios-filled/100/business.png" alt="Business Understanding"></div>
+          <div class="content">Understand business goals and product-market fit</div>
         </div>
         <div class="step right">
-          <div class="icon"><img src="https://img.icons8.com/color/96/react-native.png" alt="React"></div>
-          <div class="content">Learn JS Frameworks like React.js</div>
+          <div class="icon"><img src="https://img.icons8.com/ios/100/planning.png" alt="Roadmapping"></div>
+          <div class="content">Learn to create product roadmaps and backlogs</div>
         </div>
         <div class="step left">
-          <div class="icon"><img src="https://img.icons8.com/fluency/96/node-js.png" alt="Node"></div>
-          <div class="content">Master Backend (Node.js / Express)</div>
+          <div class="icon"><img src="https://img.icons8.com/ios/100/agile.png" alt="Agile"></div>
+          <div class="content">Master Agile, Scrum and Kanban methodologies</div>
         </div>
         <div class="step right">
-          <div class="icon"><img src="https://img.icons8.com/color/96/mongodb.png" alt="MongoDB"></div>
-          <div class="content">Understand Databases (MongoDB / SQL)</div>
+          <div class="icon"><img src="https://img.icons8.com/ios/100/feedback.png" alt="User Feedback"></div>
+          <div class="content">Conduct user research and gather feedback</div>
         </div>
         <div class="step left">
-          <div class="icon"><img src="https://img.icons8.com/color/96/github--v1.png" alt="GitHub"></div>
-          <div class="content">Host on GitHub & Deploy using Netlify</div>
+          <div class="icon"><img src="https://img.icons8.com/ios/100/data-configuration.png" alt="Data"></div>
+          <div class="content">Analyze product performance using data</div>
+        </div>
+        <div class="step right">
+          <div class="icon"><img src="https://img.icons8.com/ios/100/idea.png" alt="Execution"></div>
+          <div class="content">Collaborate with tech, design, and marketing teams</div>
         </div>
       </div>
     </section>
@@ -239,45 +247,51 @@
     <section>
       <h2>🎓 Free Courses</h2>
       <div class="links">
-        <a href="https://www.freecodecamp.org/learn" target="_blank">FreeCodeCamp Web Dev</a>
-        <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
-        <a href="https://www.youtube.com/playlist?list=PL9ooVrP1hQOG2vDqvjRCK0Sb-2C4jPBJ9" target="_blank">Web Dev - YouTube</a>
+        <a href="https://www.coursera.org/learn/uva-darden-digital-product-management" target="_blank">Coursera - Product Mgmt</a>
+        <a href="https://www.edx.org/course/becoming-a-successful-leader" target="_blank">edX - Product Thinking</a>
+        <a href="https://www.productschool.com/free-product-management-resources" target="_blank">Product School Resources</a>
       </div>
     </section>
 
     <section>
       <h2>🎥 YouTube Videos</h2>
       <div class="video-container">
-        <div class="video-card"><iframe src="https://www.youtube.com/embed/UB1O30fR-EE" allowfullscreen></iframe></div>
-        <div class="video-card"><iframe src="https://www.youtube.com/embed/Q33KBiDriJY" allowfullscreen></iframe></div>
-        <div class="video-card"><iframe src="https://www.youtube.com/embed/3PHXvlpOkf4" allowfullscreen></iframe></div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/jBzJjGgsxg0" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/KDFNxMu0p6E" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/Eml2xnoLpYE" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
 
     <section>
       <h2>💡 Sample Projects</h2>
       <ul>
-        <li>🔧 Basic: Portfolio Website, Quiz App</li>
-        <li>💻 Intermediate: Weather App, Blog App with Markdown</li>
-        <li>🚀 Advanced: Full Stack Chat App, Ecommerce Website</li>
+        <li>📊 Build a product spec document for a new feature idea</li>
+        <li>🛠 Redesign a mobile app workflow and explain value add</li>
+        <li>📈 Analyze a SaaS tool and write a go-to-market plan</li>
       </ul>
     </section>
 
     <section>
       <h2>📄 Resume Tips</h2>
       <ul>
-        <li>📌 Highlight web projects with GitHub/Live links</li>
-        <li>🛠 Mention tools: VS Code, React, GitHub</li>
-        <li>🔗 Add deployment URLs (Netlify/Vercel)</li>
+        <li>✅ Highlight cross-functional leadership experience</li>
+        <li>🔍 Showcase problem-solving with metrics</li>
+        <li>📁 Add links to product case studies</li>
       </ul>
     </section>
 
     <section>
-      <h2>👨‍💼 Industry Mentors</h2>
+      <h2>👩‍💼 Industry Mentors</h2>
       <ul>
-        <li><a href="https://www.linkedin.com/in/bradtraversy/" target="_blank">Brad Traversy - Traversy Media</a></li>
-        <li><a href="https://www.linkedin.com/in/angela-yu-963a584b/" target="_blank">Angela Yu - AppBrewery</a></li>
-        <li><a href="https://www.linkedin.com/in/colt-steele/" target="_blank">Colt Steele - Web Developer Instructor</a></li>
+        <li><a href="https://www.linkedin.com/in/kennyshin/" target="_blank">Kenny Shin - Sr. PM at Google</a></li>
+        <li><a href="https://www.linkedin.com/in/julie-zhuo-07b4b5/" target="_blank">Julie Zhuo - Former PM at Facebook</a></li>
+        <li><a href="https://www.linkedin.com/in/shreyasdoshi/" target="_blank">Shreyas Doshi - Product Leader</a></li>
       </ul>
     </section>
 

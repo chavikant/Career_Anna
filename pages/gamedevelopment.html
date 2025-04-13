@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Game Development - Career Anna</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #0c0f1a;
+      color: #e0e0e0;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #00f0ff;
+      margin-bottom: 50px;
+      text-shadow: 0 0 10px #00f0ff;
+    }
+
+    section {
+      padding: 50px 20px;
+      background: #0c101b;
+      color: #00f0ff;
+      margin-bottom: 50px;
+      border-radius: 12px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #00f0ff;
+      margin-bottom: 60px;
+    }
+
+    .graphic-roadmap {
+      position: relative;
+      margin: auto;
+      max-width: 900px;
+    }
+
+    .roadmap-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 6px;
+      background: #00f0ff;
+      transform: translateX(-50%);
+      border-radius: 3px;
+    }
+
+    .step {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 70px;
+      position: relative;
+    }
+
+    .step.left .content {
+      order: 1;
+      text-align: right;
+    }
+
+    .step.right .content {
+      order: 2;
+      text-align: left;
+    }
+
+    .step .icon {
+      width: 60px;
+      height: 60px;
+      background: #101828;
+      border: 2px solid #00f0ff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px #00f0ff;
+      z-index: 1;
+    }
+
+    .step .icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .step .content {
+      background: #101828;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00f0ff;
+      color: #fff;
+      font-size: 1rem;
+      width: 40%;
+    }
+
+    .step.left {
+      flex-direction: row;
+    }
+
+    .step.right {
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: 768px) {
+      .roadmap-line {
+        left: 20px;
+        transform: none;
+      }
+
+      .step {
+        flex-direction: column !important;
+        align-items: flex-start;
+        margin-left: 40px;
+      }
+
+      .step .content {
+        width: 90%;
+        text-align: left !important;
+      }
+
+      .step .icon {
+        margin-bottom: 10px;
+      }
+    }
+
+    .links a {
+      display: inline-block;
+      background: #00f0ff;
+      color: black;
+      padding: 10px 18px;
+      margin: 6px 8px 6px 0;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+
+    .links a:hover {
+      background: #00cccc;
+      transform: scale(1.05);
+    }
+
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .video-card {
+      background: #1a1f30;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .video-card:hover {
+      transform: scale(1.05);
+    }
+
+    iframe {
+      display: block;
+      width: 320px;
+      height: 180px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        width: 100%;
+        height: 200px;
+      }
+
+      .video-card {
+        width: 100%;
+      }
+    }
+
+    ul {
+      padding-left: 20px;
+      color: #fff;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00f0ff;
+    }
+
+    .back-home-btn {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 12px 25px;
+      background-color: #00f0ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00f0ff;
+      transition: all 0.3s ease;
+    }
+
+    .back-home-btn:hover {
+      background-color: #00cccc;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00f0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Game Development 🎮</h1>
+
+    <section>
+      <h2>📍 Roadmap</h2>
+      <div class="graphic-roadmap">
+        <div class="roadmap-line"></div>
+
+        <div class="step left">
+          <div class="content">Learn Programming: Start with C# (Unity) or C++ (Unreal)</div>
+          <div class="icon"><img src="https://img.icons8.com/ios-filled/100/code.png" alt="Programming"></div>
+        </div>
+
+        <div class="step right">
+          <div class="content">Master Game Engines like Unity or Unreal Engine</div>
+          <div class="icon"><img src="https://img.icons8.com/color/96/unity.png" alt="Unity"></div>
+        </div>
+
+        <div class="step left">
+          <div class="content">Understand Game Mechanics and Level Design</div>
+          <div class="icon"><img src="https://img.icons8.com/ios/100/joystick.png" alt="Game Design"></div>
+        </div>
+
+        <div class="step right">
+          <div class="content">Use or Create 2D/3D assets, animations, and sound</div>
+          <div class="icon"><img src="https://img.icons8.com/ios/100/3d-modeling.png" alt="Assets"></div>
+        </div>
+
+        <div class="step left">
+          <div class="content">Test, Debug, and Optimize your game</div>
+          <div class="icon"><img src="https://img.icons8.com/ios/100/bug.png" alt="Testing"></div>
+        </div>
+
+        <div class="step right">
+          <div class="content">Publish to PC, Console, or Mobile platforms</div>
+          <div class="icon"><img src="https://img.icons8.com/ios/100/globe--v1.png" alt="Publish"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎓 Free Courses</h2>
+      <div class="links">
+        <a href="https://learn.unity.com/" target="_blank">Unity Learn</a>
+        <a href="https://www.udemy.com/course/unitycourse/" target="_blank">Complete Unity Game Dev - Udemy</a>
+        <a href="https://www.coursera.org/specializations/game-development" target="_blank">Coursera Game Dev</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎥 YouTube Videos</h2>
+      <div class="video-container">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/gB1F9G0JXOo" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/IlKaB1etrik" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/wr4DH5bDNh0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>💡 Sample Projects</h2>
+      <ul>
+        <li>🕹 Build a 2D platformer using Unity</li>
+        <li>🧠 Design a puzzle game with physics-based mechanics</li>
+        <li>🚀 Create a first-person shooter prototype in Unreal Engine</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📄 Resume Tips</h2>
+      <ul>
+        <li>🎯 Add playable game demos in your portfolio</li>
+        <li>📂 Include links to GitHub and Itch.io projects</li>
+        <li>🛠 Mention tools (Unity, Unreal, Blender, etc.) and roles (Dev/Design)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>👩‍💼 Industry Mentors</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/markbrownvgd/" target="_blank">Mark Brown - Game Designer</a></li>
+        <li><a href="https://www.linkedin.com/in/brackeys/" target="_blank">Brackeys (YouTuber & Educator)</a></li>
+        <li><a href="https://www.linkedin.com/in/jasonrubin/" target="_blank">Jason Rubin - Co-Founder, Naughty Dog</a></li>
+      </ul>
+    </section>
+
+    <a href="../landingpage.html" class="back-home-btn">🏠 Back to Home</a>
+  </div>
+</body>
+</html>

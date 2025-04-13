@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Embedded Engineer - Career Anna</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #0c0f1a;
+      color: #e0e0e0;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #00f0ff;
+      margin-bottom: 50px;
+      text-shadow: 0 0 10px #00f0ff;
+    }
+    section {
+      padding: 50px 20px;
+      background: #0c101b;
+      color: #00f0ff;
+      margin-bottom: 50px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #00f0ff;
+      margin-bottom: 60px;
+    }
+
+    .graphic-roadmap {
+      display: grid;
+      gap: 40px;
+      position: relative;
+    }
+
+    .roadmap-line {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(to bottom, #00f0ff, transparent);
+      transform: translateX(-50%);
+      z-index: 0;
+      border-radius: 3px;
+      animation: pulse 2s infinite;
+    }
+
+    .step {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .step:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .icon {
+      background: #101828;
+      border: 2px solid #00f0ff;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #00f0ff;
+    }
+
+    .icon img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .content {
+      background: #101828;
+      padding: 20px 25px;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 1.1rem;
+      width: 300px;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+
+    @media (max-width: 768px) {
+      .step {
+        flex-direction: column !important;
+        text-align: center;
+      }
+      .content {
+        width: 90%;
+      }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #00f0ff; }
+      50% { box-shadow: 0 0 25px #00f0ff; }
+      100% { box-shadow: 0 0 10px #00f0ff; }
+    }
+
+    .links a {
+      display: inline-block;
+      background: #00f0ff;
+      color: #000;
+      padding: 10px 18px;
+      margin: 6px 8px 6px 0;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+
+    .links a:hover {
+      background: #00c2d4;
+      transform: scale(1.05);
+    }
+
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .video-card {
+      background: #1a1f30;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .video-card:hover {
+      transform: scale(1.05);
+    }
+
+    iframe {
+      width: 320px;
+      height: 180px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        width: 100%;
+        height: 200px;
+      }
+      .video-card {
+        width: 100%;
+      }
+    }
+
+    ul {
+      padding-left: 20px;
+      color: #fff;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00f0ff;
+    }
+
+    .back-home-btn {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 12px 25px;
+      background-color: #00f0ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00f0ff;
+      transition: all 0.3s ease;
+    }
+
+    .back-home-btn:hover {
+      background-color: #00c2d4;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00f0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Embedded Engineer 🔧</h1>
+
+    <section>
+      <h2>📍 Roadmap</h2>
+      <div class="graphic-roadmap">
+        <div class="roadmap-line"></div>
+
+        <div class="step">
+          <div class="icon"><img src="https://img.icons8.com/ios/100/c-programming.png" alt="C Programming"></div>
+          <div class="content">Master C/C++ for embedded systems development</div>
+        </div>
+
+        <div class="step">
+          <div class="icon"><img src="https://img.icons8.com/ios/100/chip.png" alt="Microcontrollers"></div>
+          <div class="content">Learn microcontrollers like Arduino, STM32, PIC</div>
+        </div>
+
+        <div class="step">
+          <div class="icon"><img src="https://img.icons8.com/ios/100/linux.png" alt="RTOS & Linux"></div>
+          <div class="content">Understand Real-Time OS and Embedded Linux</div>
+        </div>
+
+        <div class="step">
+          <div class="icon"><img src="https://img.icons8.com/ios/100/wifi.png" alt="IoT"></div>
+          <div class="content">Work on IoT protocols like MQTT, BLE, and WiFi</div>
+        </div>
+
+        <div class="step">
+          <div class="icon"><img src="https://img.icons8.com/ios/100/tools.png" alt="Projects"></div>
+          <div class="content">Build and deploy real embedded projects</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎓 Free Courses</h2>
+      <div class="links">
+        <a href="https://www.udemy.com/course/embedded-systems/" target="_blank">Udemy - Embedded Systems</a>
+        <a href="https://www.coursera.org/learn/raspberry-pi-interface" target="_blank">Coursera - Raspberry Pi</a>
+        <a href="https://nptel.ac.in/courses/117/102/117102104/" target="_blank">NPTEL - Embedded System Design</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎥 YouTube Videos</h2>
+      <div class="video-container">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/FfsNPsJ0gS8" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/hvd4-K-mwfw" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/JfI5PISLr9E" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>💡 Sample Projects</h2>
+      <ul>
+        <li>📡 Home Automation using ESP32</li>
+        <li>🎮 Custom Game Controller using Arduino</li>
+        <li>🧠 Health Monitoring Wearable Device</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📄 Resume Tips</h2>
+      <ul>
+        <li>⚙ Highlight C/C++, RTOS, and microcontroller projects</li>
+        <li>🔗 Add GitHub links to your embedded projects</li>
+        <li>📦 Include knowledge of protocols like SPI, I2C, UART</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>👩‍💼 Industry Mentors</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/balajiviswanathan/" target="_blank">Balaji Viswanathan - Invento</a></li>
+        <li><a href="https://www.linkedin.com/in/ashish-sharma-robotics/" target="_blank">Ashish Sharma - Robotics India</a></li>
+        <li><a href="https://www.linkedin.com/in/shwetabh/" target="_blank">Shwetabh Shrivastava - Embedded Lead</a></li>
+      </ul>
+    </section>
+
+    <a href="../landingpage.html" class="back-home-btn">🏠 Back to Home</a>
+  </div>
+</body>
+</html>
