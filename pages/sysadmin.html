@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>System Administrator - Career Anna</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #0c0f1a;
+      color: #e0e0e0;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #00f0ff;
+      margin-bottom: 50px;
+      text-shadow: 0 0 10px #00f0ff;
+    }
+
+    section {
+      padding: 50px 20px;
+      background: #0c101b;
+      color: #00f0ff;
+      margin-bottom: 50px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #00f0ff55;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #00f0ff;
+      margin-bottom: 60px;
+    }
+
+    .graphic-roadmap {
+      position: relative;
+      width: 90%;
+      margin: auto;
+    }
+
+    .graphic-roadmap::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(to bottom, #00f0ff, transparent);
+      transform: translateX(-50%);
+      z-index: 0;
+      border-radius: 3px;
+      animation: pulse 2s infinite;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 70px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .step.right {
+      justify-content: flex-end;
+    }
+
+    .step .icon {
+      background: #101828;
+      border: 2px solid #00f0ff;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #00f0ff;
+      margin: 0 20px;
+    }
+
+    .step .icon img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .step .content {
+      background: #101828;
+      padding: 20px 25px;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 1.1rem;
+      width: 300px;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #00f0ff; }
+      50% { box-shadow: 0 0 25px #00f0ff; }
+      100% { box-shadow: 0 0 10px #00f0ff; }
+    }
+
+    @media (max-width: 768px) {
+      .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .step.right {
+        justify-content: center;
+      }
+
+      .step .content {
+        width: 90%;
+      }
+    }
+
+    .links a {
+      display: inline-block;
+      background: #00f0ff;
+      color: black;
+      padding: 10px 18px;
+      margin: 6px 8px 6px 0;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+
+    .links a:hover {
+      background: #00c0cc;
+      transform: scale(1.05);
+    }
+
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .video-card {
+      background: #1a1f30;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .video-card:hover {
+      transform: scale(1.05);
+    }
+
+    iframe {
+      display: block;
+      width: 320px;
+      height: 180px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        width: 100%;
+        height: 200px;
+      }
+
+      .video-card {
+        width: 100%;
+      }
+    }
+
+    ul {
+      padding-left: 20px;
+      color: #fff;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00f0ff;
+    }
+
+    .back-home-btn {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 12px 25px;
+      background-color: #00f0ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00f0ff;
+      transition: all 0.3s ease;
+    }
+
+    .back-home-btn:hover {
+      background-color: #00c0cc;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00f0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>System Administrator 🖥️</h1>
+
+    <section>
+      <h2>📍 Roadmap</h2>
+      <div class="graphic-roadmap">
+        <div class="step left">
+          <div class="icon"><img src="https://img.icons8.com/external-flat-icons-inmotus-design/100/external-linux-technology-flat-icons-inmotus-design.png" alt="Linux Basics"></div>
+          <div class="content">Master Linux and Windows administration</div>
+        </div>
+        <div class="step right">
+          <div class="icon"><img src="https://img.icons8.com/color/96/network-card.png" alt="Networking"></div>
+          <div class="content">Understand networking concepts and protocols</div>
+        </div>
+        <div class="step left">
+          <div class="icon"><img src="https://img.icons8.com/ios/100/cloud.png" alt="Cloud"></div>
+          <div class="content">Learn cloud infrastructure (AWS, Azure)</div>
+        </div>
+        <div class="step right">
+          <div class="icon"><img src="https://img.icons8.com/ios-filled/100/firewall.png" alt="Security"></div>
+          <div class="content">Focus on system security and firewalls</div>
+        </div>
+        <div class="step left">
+          <div class="icon"><img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/external-script-computer-programming-flaticons-lineal-color-flat-icons.png" alt="Scripting"></div>
+          <div class="content">Learn scripting (Bash, PowerShell)</div>
+        </div>
+        <div class="step right">
+          <div class="icon"><img src="https://img.icons8.com/ios-filled/100/maintenance.png" alt="Monitoring"></div>
+          <div class="content">Use tools for system monitoring and maintenance</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎓 Free Courses</h2>
+      <div class="links">
+        <a href="https://www.udemy.com/course/linux-for-beginners/" target="_blank">Linux for Beginners - Udemy</a>
+        <a href="https://www.coursera.org/specializations/system-administration-it-infrastructure-services" target="_blank">System Admin - Coursera</a>
+        <a href="https://www.edx.org/learn/networking" target="_blank">Networking Basics - edX</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎥 YouTube Videos</h2>
+      <div class="video-container">
+        <div class="video-card"><iframe src="https://www.youtube.com/embed/z3FHnJY9Zvc" allowfullscreen></iframe></div>
+        <div class="video-card"><iframe src="https://www.youtube.com/embed/tTqZ1grnkdA" allowfullscreen></iframe></div>
+        <div class="video-card"><iframe src="https://www.youtube.com/embed/6Ww9RhVx_VE" allowfullscreen></iframe></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>💡 Sample Projects</h2>
+      <ul>
+        <li>🛡️ Set up a secure mail server using Linux</li>
+        <li>📡 Build a local DNS and DHCP server</li>
+        <li>🔐 Implement user and group permissions with audit logs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📄 Resume Tips</h2>
+      <ul>
+        <li>⚙️ Highlight tools like Ansible, Nagios, Puppet</li>
+        <li>📁 Include experience with shell scripts</li>
+        <li>🖧 Showcase real server setups and network configs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>👨‍💼 Industry Mentors</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/gary-sysadmin/" target="_blank">Gary Parker - System Admin Lead</a></li>
+        <li><a href="https://www.linkedin.com/in/tina-ops/" target="_blank">Tina Smith - Cloud & Infra Engineer</a></li>
+        <li><a href="https://www.linkedin.com/in/sysadminjohn/" target="_blank">John Doe - Infrastructure Architect</a></li>
+      </ul>
+    </section>
+
+    <a href="../landingpage.html" class="back-home-btn">🏠 Back to Home</a>
+  </div>
+</body>
+</html>

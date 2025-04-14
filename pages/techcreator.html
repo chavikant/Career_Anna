@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tech Content Creator - Career Anna</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #0c0f1a;
+      color: #e0e0e0;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #00f0ff;
+      margin-bottom: 50px;
+      text-shadow: 0 0 10px #00f0ff;
+    }
+
+    section {
+      padding: 50px 20px;
+      background: #0c101b;
+      color: #00f0ff;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #00f0ff;
+      margin-bottom: 60px;
+    }
+
+    .graphic-roadmap {
+      position: relative;
+      width: 90%;
+      margin: auto;
+    }
+
+    .graphic-roadmap::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(to bottom, #00f0ff, transparent);
+      transform: translateX(-50%);
+      z-index: 0;
+      border-radius: 3px;
+      animation: pulse 2s infinite;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 70px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .step.right {
+      justify-content: flex-end;
+    }
+
+    .step .icon {
+      background: #101828;
+      border: 2px solid #00f0ff;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #00f0ff;
+      margin: 0 20px;
+    }
+
+    .step .icon img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .step .content {
+      background: #101828;
+      padding: 20px 25px;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 1.1rem;
+      width: 300px;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #00f0ff; }
+      50% { box-shadow: 0 0 25px #00f0ff; }
+      100% { box-shadow: 0 0 10px #00f0ff; }
+    }
+
+    @media (max-width: 768px) {
+      .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .step.right {
+        justify-content: center;
+      }
+      .step .content {
+        width: 90%;
+      }
+    }
+
+    .links a {
+      display: inline-block;
+      background: #00f0ff;
+      color: #000;
+      padding: 10px 18px;
+      margin: 6px 8px 6px 0;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+
+    .links a:hover {
+      background: #00c0dd;
+      transform: scale(1.05);
+    }
+
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .video-card {
+      background: #1a1f30;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .video-card:hover {
+      transform: scale(1.05);
+    }
+
+    iframe {
+      display: block;
+      width: 320px;
+      height: 180px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        width: 100%;
+        height: 200px;
+      }
+      .video-card {
+        width: 100%;
+      }
+    }
+
+    ul {
+      padding-left: 20px;
+      color: #fff;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00f0ff;
+    }
+
+    .back-home-btn {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 12px 25px;
+      background-color: #00f0ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00f0ff;
+      transition: all 0.3s ease;
+    }
+
+    .back-home-btn:hover {
+      background-color: #00ddee;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00f0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tech Content Creator ✍️</h1>
+
+    <section>
+      <h2>📍 Roadmap</h2>
+      <div class="graphic-roadmap">
+        <div class="step left">
+          <div class="icon"><img src="https://img.icons8.com/ios/100/blog.png" alt="Blogging"></div>
+          <div class="content">Understand different content formats: Blogs, Videos, Social Posts</div>
+        </div>
+
+        <div class="step right">
+          <div class="icon"><img src="https://img.icons8.com/color/96/seo.png" alt="SEO"></div>
+          <div class="content">Learn SEO, keyword research, and analytics tools</div>
+        </div>
+
+        <div class="step left">
+          <div class="icon"><img src="https://img.icons8.com/ios/100/video-editing.png" alt="Video Editing"></div>
+          <div class="content">Gain skills in video editing and YouTube optimization</div>
+        </div>
+
+        <div class="step right">
+          <div class="icon"><img src="https://img.icons8.com/color/96/technical-support.png" alt="Technical Writing"></div>
+          <div class="content">Practice technical writing and simplifying complex topics</div>
+        </div>
+
+        <div class="step left">
+          <div class="icon"><img src="https://img.icons8.com/ios/100/online-support.png" alt="Community"></div>
+          <div class="content">Engage with developer communities (Reddit, Dev.to)</div>
+        </div>
+
+        <div class="step right">
+          <div class="icon"><img src="https://img.icons8.com/ios/100/portfolio.png" alt="Portfolio"></div>
+          <div class="content">Build a portfolio showcasing blogs, videos, and collaborations</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎓 Free Courses</h2>
+      <div class="links">
+        <a href="https://www.coursera.org/learn/content-marketing" target="_blank">Content Marketing - Coursera</a>
+        <a href="https://www.youtube.com/watch?v=whmA5xQynA0" target="_blank">Technical Writing - YouTube</a>
+        <a href="https://www.freecodecamp.org/news/technical-writing/" target="_blank">Technical Writing - FreeCodeCamp</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎥 YouTube Videos</h2>
+      <div class="video-container">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/kHyD06hFjCE" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/CVClHLwv-4I" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/BJ1yTo7FWoA" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>💡 Sample Projects</h2>
+      <ul>
+        <li>📝 Write blogs explaining complex tech concepts simply</li>
+        <li>🎥 Start a YouTube channel on beginner-friendly coding tutorials</li>
+        <li>📘 Create a series of guides for open-source project documentation</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📄 Resume Tips</h2>
+      <ul>
+        <li>🔗 Add links to articles, blogs, videos, or newsletters you've written</li>
+        <li>📊 Highlight audience engagement metrics if available</li>
+        <li>🧰 Mention tools like Grammarly, Notion, OBS, Canva, etc.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>👨‍🏫 Industry Mentors</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/vaidehijoshi/" target="_blank">Vaidehi Joshi - Tech Writer</a></li>
+        <li><a href="https://www.linkedin.com/in/gwenfaraday/" target="_blank">Gwen Faraday - YouTuber & Dev Educator</a></li>
+        <li><a href="https://www.linkedin.com/in/ankushchoubey/" target="_blank">Ankush Choubey - DevRel @ Google</a></li>
+      </ul>
+    </section>
+
+    <a href="../landingpage.html" class="back-home-btn">🏠 Back to Home</a>
+  </div>
+</body>
+</html>
