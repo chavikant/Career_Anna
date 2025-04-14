@@ -143,6 +143,58 @@
       border-top: 1px solid #00c6ff44;
       margin-top: 50px;
     }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+      .header h1 {
+        font-size: 1.7rem;
+      }
+
+      .header p {
+        font-size: 0.9rem;
+      }
+
+      .container {
+        padding: 30px 15px;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+      }
+
+      .career-card {
+        padding: 18px;
+      }
+
+      .career-card h2 {
+        font-size: 1.1rem;
+      }
+
+      .career-card p {
+        font-size: 0.85rem;
+      }
+
+      footer {
+        padding: 15px;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header {
+        padding: 20px 10px;
+      }
+
+      .header h1::after {
+        right: -35px;
+      }
+
+      .container {
+        padding: 25px 10px;
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    
   </style>
 </head>
 <body>
