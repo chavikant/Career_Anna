@@ -6,241 +6,234 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: #0c0f1a;
-      color: #e0e0e0;
-    }
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: #0c0f1a;
+  color: #e0e0e0;
+}
 
-    .container {
-      padding: 40px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.container {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    h1 {
-      text-align: center;
-      font-size: 3rem;
-      color: #00f0ff;
-      margin-bottom: 50px;
-      text-shadow: 0 0 10px #00f0ff;
-    }
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #00f0ff;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px #00f0ff;
+}
 
-    section {
-      padding: 50px 20px;
-      background: #0c101b;
-      color: #00f0ff;
-      margin-bottom: 50px;
-    }
+section {
+  background: #101828;
+  border: 1px solid #00f0ff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  padding: 30px;
+  margin-bottom: 50px;
+  transition: 0.3s ease;
+}
 
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      color: #00f0ff;
-      margin-bottom: 60px;
-    }
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+}
 
-    /* ROADMAP STYLES */
-    .roadmap-container {
-      position: relative;
-      margin: 60px auto;
-      width: 90%;
-      max-width: 900px;
-    }
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-left: 6px solid #00f0ff;
+  padding-left: 12px;
+  color: #ffffff;
+  text-shadow: 0 0 8px #00f0ff;
+}
 
-    .roadmap-line {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 6px;
-      height: 100%;
-      background: #00f0ff;
-      transform: translateX(-50%);
-      z-index: 0;
-      border-radius: 3px;
-      animation: pulse 2s infinite;
-    }
+ul {
+  padding-left: 20px;
+}
 
-    .roadmap-item {
-      position: relative;
-      width: 50%;
-      padding: 20px 40px;
-      box-sizing: border-box;
-    }
+ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
 
-    .roadmap-item.left {
-      left: 0;
-      text-align: right;
-    }
+.links a {
+  display: inline-block;
+  background: #00f0ff;
+  color: #000;
+  padding: 10px 18px;
+  margin: 6px 8px 6px 0;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  box-shadow: 0 0 12px #00f0ff;
+  font-weight: bold;
+}
 
-    .roadmap-item.right {
-      left: 50%;
-      text-align: left;
-    }
+.links a:hover {
+  background: #0ff;
+  transform: scale(1.05);
+}
 
-    .roadmap-item .content-box {
-      background: #101828;
-      color: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 12px #00f0ff;
-      position: relative;
-    }
+.graphic-roadmap {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
 
-    .roadmap-item.left .content-box::after,
-    .roadmap-item.right .content-box::after {
-      content: '';
-      position: absolute;
-      top: 20px;
-      width: 12px;
-      height: 12px;
-      background: #00f0ff;
-      border-radius: 50%;
-      box-shadow: 0 0 10px #00f0ff;
-    }
+.graphic-roadmap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, #00f0ff, transparent);
+  transform: translateX(-50%);
+  z-index: 0;
+  border-radius: 3px;
+  animation: pulse 2s infinite;
+}
 
-    .roadmap-item.left .content-box::after {
-      right: -30px;
-    }
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 2;
+}
 
-    .roadmap-item.right .content-box::after {
-      left: -30px;
-    }
+.step.right {
+  justify-content: flex-end;
+}
 
-    .roadmap-item h3 {
-      margin: 0 0 10px;
-      font-size: 1.3rem;
-      color: #00f0ff;
-    }
+.step .icon {
+  background: #0c0f1a;
+  border: 2px solid #00f0ff;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00f0ff;
+  margin: 0 20px;
+}
 
-    @media (max-width: 768px) {
-      .roadmap-item,
-      .roadmap-item.left,
-      .roadmap-item.right {
-        width: 100%;
-        left: 0;
-        text-align: center;
-        margin-bottom: 40px;
-      }
+.step .icon img {
+  width: 60px;
+  height: 60px;
+}
 
-      .roadmap-line {
-        left: 10px;
-      }
+.step .content {
+  background: #0c0f1a;
+  padding: 20px 25px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1.1rem;
+  width: 300px;
+  box-shadow: 0 0 12px #00f0ff;
+}
 
-      .roadmap-item .content-box {
-        margin-left: 30px;
-      }
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px #00f0ff;
+  }
+  50% {
+    box-shadow: 0 0 25px #00f0ff;
+  }
+  100% {
+    box-shadow: 0 0 10px #00f0ff;
+  }
+}
 
-      .roadmap-item.left .content-box::after,
-      .roadmap-item.right .content-box::after {
-        left: -20px;
-        right: auto;
-      }
-    }
+@media (max-width: 768px) {
+  .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    /* OTHER SECTION STYLES */
-    .links a {
-      display: inline-block;
-      background: #00f0ff;
-      color: white;
-      padding: 10px 18px;
-      margin: 6px 8px 6px 0;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: 0.3s;
-      box-shadow: 0 0 10px #00f0ff;
-    }
+  .step.right {
+    justify-content: center;
+  }
 
-    .links a:hover {
-      background: #00c0cc;
-      transform: scale(1.05);
-    }
+  .step .content {
+    width: 90%;
+  }
+}
 
-    .video-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
+/* Video Section */
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
-    .video-card {
-      background: #1a1f30;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
-      transition: transform 0.3s;
-    }
+.video-card {
+  background: #0c0f1a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s;
+}
 
-    .video-card:hover {
-      transform: scale(1.05);
-    }
+.video-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px #00f0ff;
+}
 
-    iframe {
-      display: block;
-      width: 320px;
-      height: 180px;
-      border: none;
-    }
+iframe {
+  display: block;
+  width: 320px;
+  height: 180px;
+  border: none;
+}
 
-    @media (max-width: 768px) {
-      iframe {
-        width: 100%;
-        height: 200px;
-      }
-      .video-card {
-        width: 100%;
-      }
-    }
+@media (max-width: 768px) {
+  iframe {
+    width: 100%;
+    height: 200px;
+  }
 
-    ul {
-      padding-left: 20px;
-      color: #fff;
-    }
+  .video-card {
+    width: 100%;
+  }
+}
 
-    ul li {
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
+a {
+  color: #00f0ff;
+}
 
-    a {
-      color: #00f0ff;
-    }
+.back-home-btn {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 12px 25px;
+  background-color: #00f0ff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #00f0ff;
+  transition: all 0.3s ease;
+}
 
-    .back-home-btn {
-      display: inline-block;
-      margin-top: 50px;
-      padding: 12px 25px;
-      background-color: #00f0ff;
-      color: #000;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 0 10px #00f0ff;
-      transition: all 0.3s ease;
-    }
-
-    .back-home-btn:hover {
-      background-color: #00d6e6;
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #00f0ff;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 10px #00f0ff; }
-      50% { box-shadow: 0 0 25px #00f0ff; }
-      100% { box-shadow: 0 0 10px #00f0ff; }
-    }
+.back-home-btn:hover {
+  background-color: #0ff;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00f0ff;
+}
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>UI/UX Designer 🎨</h1>
+    <h1>UI/UX ````                                                                                                  `   Designer 🎨</h1>
 
     <section>
       <h2>📍 Roadmap</h2>

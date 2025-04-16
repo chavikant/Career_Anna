@@ -5,7 +5,6 @@
   <title>Web Development - Career Anna</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-    /* same CSS as app development page */
     * {
       box-sizing: border-box;
       scroll-behavior: smooth;
@@ -28,25 +27,29 @@
       text-align: center;
       font-size: 3rem;
       color: #00ffff;
-      margin-bottom: 50px;
-      text-shadow: 0 0 10px #00ffff;
+      margin-bottom: 60px;
+      text-shadow: 0 0 15px #00ffff;
     }
 
     section {
-      padding: 50px 20px;
+      margin-bottom: 60px;
+      padding: 40px 20px;
       background: #0c101b;
-      color: #00f0ff;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0, 240, 255, 0.2);
+      transition: transform 0.3s ease;
     }
 
     section:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
     }
 
     h2 {
       text-align: center;
       font-size: 2rem;
       color: #00f0ff;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px #00f0ff;
     }
 
     .graphic-roadmap {
@@ -103,7 +106,7 @@
       color: #fff;
       font-size: 1.1rem;
       width: 300px;
-      box-shadow: 0 0 10px #00f0ff;
+      box-shadow: 0 0 15px #00f0ff;
     }
 
     @keyframes pulse {
@@ -125,6 +128,7 @@
 
       .step .content {
         width: 90%;
+        margin-top: 20px;
       }
     }
 
@@ -133,7 +137,7 @@
       background: #00bfff;
       color: white;
       padding: 10px 18px;
-      margin: 6px 8px 6px 0;
+      margin: 6px 10px 6px 0;
       text-decoration: none;
       border-radius: 8px;
       transition: 0.3s;
@@ -157,7 +161,7 @@
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
-      transition: transform 0.3s;
+      transition: transform 0.3s ease;
     }
 
     .video-card:hover {
@@ -186,17 +190,31 @@
       color: #00ffff;
     }
 
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1rem;
+    }
+
+    ul li {
+      margin: 12px 0;
+      padding-left: 1.2em;
+      text-indent: -1.2em;
+    }
+
     .back-home-btn {
-      display: inline-block;
-      margin-top: 50px;
-      padding: 12px 25px;
+      display: block;
+      text-align: center;
+      margin: 50px auto 0;
+      padding: 14px 30px;
       background-color: #00f0ff;
       color: #000;
       font-weight: bold;
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
-      box-shadow: 0 0 10px #00f0ff;
+      box-shadow: 0 0 12px #00f0ff;
       transition: all 0.3s ease;
+      max-width: fit-content;
     }
 
     .back-home-btn:hover {
