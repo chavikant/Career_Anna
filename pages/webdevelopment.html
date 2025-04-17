@@ -3,225 +3,283 @@
 <head>
   <meta charset="UTF-8" />
   <title>Web Development - Career Anna</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+  @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: #0c0f1a;
-      color: #e0e0e0;
-    }
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-    .container {
-      padding: 40px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: #0c0f1a;
+  color: #e0e0e0;
+}
 
-    h1 {
-      text-align: center;
-      font-size: 3rem;
-      color: #00ffff;
-      margin-bottom: 60px;
-      text-shadow: 0 0 15px #00ffff;
-    }
+.container {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    section {
-      margin-bottom: 60px;
-      padding: 40px 20px;
-      background: #0c101b;
-      border-radius: 16px;
-      box-shadow: 0 0 25px rgba(0, 240, 255, 0.2);
-      transition: transform 0.3s ease;
-    }
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #00f0ff;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px #00f0ff;
+}
 
-    section:hover {
-      transform: translateY(-5px);
-    }
+section {
+  background: #101828;
+  border: 1px solid #00f0ff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  padding: 30px;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease;
+}
 
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      color: #00f0ff;
-      margin-bottom: 40px;
-      text-shadow: 0 0 10px #00f0ff;
-    }
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
 
-    .graphic-roadmap {
-      position: relative;
-      width: 90%;
-      margin: auto;
-    }
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-left: 6px solid #00f0ff;
+  padding-left: 12px;
+  color: #ffffff;
+  text-shadow: 0 0 8px #00f0ff;
+}
 
-    .graphic-roadmap::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 6px;
-      height: 100%;
-      background: linear-gradient(to bottom, #00f0ff, transparent);
-      transform: translateX(-50%);
-      z-index: 0;
-      border-radius: 3px;
-      animation: pulse 2s infinite;
-    }
+ul {
+  padding-left: 20px;
+}
 
-    .step {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin-bottom: 70px;
-      position: relative;
-      z-index: 2;
-    }
+ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
 
-    .step.right {
-      justify-content: flex-end;
-    }
+.links a {
+  display: inline-block;
+  background: #00f0ff;
+  color: #000;
+  padding: 10px 18px;
+  margin: 6px 8px 6px 0;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  box-shadow: 0 0 12px #00f0ff;
+  font-weight: bold;
+}
 
-    .step .icon {
-      background: #101828;
-      border: 2px solid #00f0ff;
-      padding: 12px;
-      border-radius: 50%;
-      box-shadow: 0 0 20px #00f0ff;
-      margin: 0 20px;
-    }
+.links a:hover {
+  background: #0ff;
+  transform: scale(1.05);
+}
 
-    .step .icon img {
-      width: 60px;
-      height: 60px;
-    }
+/* === Roadmap Styling === */
+.graphic-roadmap {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
 
-    .step .content {
-      background: #101828;
-      padding: 20px 25px;
-      border-radius: 12px;
-      color: #fff;
-      font-size: 1.1rem;
-      width: 300px;
-      box-shadow: 0 0 15px #00f0ff;
-    }
+.graphic-roadmap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, #00f0ff, #ff00f0, #00f0ff);
+  transform: translateX(-50%);
+  z-index: 0;
+  border-radius: 3px;
+  animation: pulseLine 3s ease-in-out infinite;
+}
 
-    @keyframes pulse {
-      0% { box-shadow: 0 0 10px #00f0ff; }
-      50% { box-shadow: 0 0 25px #00f0ff; }
-      100% { box-shadow: 0 0 10px #00f0ff; }
-    }
+@keyframes pulseLine {
+  0% {
+    background: #00f0ff;
+    box-shadow: 0 0 10px #00f0ff;
+  }
+  50% {
+    background: #ff00f0;
+    box-shadow: 0 0 20px #ff00f0;
+  }
+  100% {
+    background: #00f0ff;
+    box-shadow: 0 0 10px #00f0ff;
+  }
+}
 
-    @media (max-width: 768px) {
-      .step {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 1s ease-in-out;
+}
 
-      .step.right {
-        justify-content: center;
-      }
+.step.right {
+  justify-content: flex-end;
+}
 
-      .step .content {
-        width: 90%;
-        margin-top: 20px;
-      }
-    }
+.step:nth-child(1) .content { animation-delay: 0s; }
+.step:nth-child(2) .content { animation-delay: 0.5s; }
+.step:nth-child(3) .content { animation-delay: 1s; }
+.step:nth-child(4) .content { animation-delay: 1.5s; }
+.step:nth-child(5) .content { animation-delay: 2s; }
 
-    .links a {
-      display: inline-block;
-      background: #00bfff;
-      color: white;
-      padding: 10px 18px;
-      margin: 6px 10px 6px 0;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: 0.3s;
-      box-shadow: 0 0 10px #00bfff;
-    }
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    .links a:hover {
-      background: #0099cc;
-      transform: scale(1.05);
-    }
+@keyframes contentGlow {
+  0% {
+    box-shadow: 0 0 0px rgba(255, 0, 255, 0);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(255, 0, 255, 0.8);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(255, 0, 255, 0);
+    transform: scale(1);
+  }
+}
 
-    .video-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
+.step .icon {
+  background: #0c0f1a;
+  border: 2px solid #00f0ff;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 18px #00f0ff;
+  margin: 0 20px;
+  transition: transform 0.3s;
+}
 
-    .video-card {
-      background: #1a1f30;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
-      transition: transform 0.3s ease;
-    }
+.step .icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #ff00f0;
+}
 
-    .video-card:hover {
-      transform: scale(1.05);
-    }
+.step .icon img {
+  width: 60px;
+  height: 60px;
+}
 
-    iframe {
-      display: block;
-      width: 320px;
-      height: 180px;
-      border: none;
-    }
+.step .content {
+  background: linear-gradient(145deg, #0c0f1a 70%, #101828);
+  padding: 20px 25px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1.1rem;
+  width: 300px;
+  border-left: 4px solid #ff00f0;
+  transition: 0.4s;
+  animation: contentGlow 2.5s ease-in-out infinite;
+}
 
-    @media (max-width: 768px) {
-      iframe {
-        width: 100%;
-        height: 200px;
-      }
+.step .content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px #ff00f0;
+  border-left: 4px solid #ff00f0;
+}
 
-      .video-card {
-        width: 100%;
-      }
-    }
+@media (max-width: 768px) {
+  .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    a {
-      color: #00ffff;
-    }
+  .step.right {
+    justify-content: center;
+  }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      font-size: 1rem;
-    }
+  .step .content {
+    width: 90%;
+  }
+}
 
-    ul li {
-      margin: 12px 0;
-      padding-left: 1.2em;
-      text-indent: -1.2em;
-    }
+/* Video Section */
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
-    .back-home-btn {
-      display: block;
-      text-align: center;
-      margin: 50px auto 0;
-      padding: 14px 30px;
-      background-color: #00f0ff;
-      color: #000;
-      font-weight: bold;
-      border-radius: 10px;
-      text-decoration: none;
-      box-shadow: 0 0 12px #00f0ff;
-      transition: all 0.3s ease;
-      max-width: fit-content;
-    }
+.video-card {
+  background: #0c0f1a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s;
+}
 
-    .back-home-btn:hover {
-      background-color: #0ff;
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #00f0ff;
-    }
+.video-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px #00f0ff;
+}
+
+iframe {
+  display: block;
+  width: 320px;
+  height: 180px;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  iframe {
+    width: 100%;
+    height: 200px;
+  }
+
+  .video-card {
+    width: 100%;
+  }
+}
+
+a {
+  color: #00f0ff;
+}
+
+.back-home-btn {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 12px 25px;
+  background-color: #00f0ff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #00f0ff;
+  transition: all 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background-color: #0ff;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00f0ff;
+}
   </style>
 </head>
 <body>
@@ -229,7 +287,7 @@
     <h1>Web Development 🌐</h1>
 
     <section>
-      <h2>📍 Roadmap</h2>
+      <h2> Roadmap</h2>
       <div class="graphic-roadmap">
         <div class="step left">
           <div class="icon"><img src="https://cdn-icons-png.freepik.com/256/9569/9569378.png?ga=GA1.1.1484411714.1744865178&semt=ais_hybrid" alt="HTML"></div>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Game Development - Career Anna</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 * {
   box-sizing: border-box;
@@ -36,15 +36,15 @@ section {
   background: #101828;
   border: 1px solid #00f0ff;
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
   padding: 30px;
   margin-bottom: 50px;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 section:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
 }
 
 section h2 {
@@ -83,6 +83,7 @@ ul li {
   transform: scale(1.05);
 }
 
+/* === Roadmap Styling === */
 .graphic-roadmap {
   position: relative;
   width: 90%;
@@ -96,11 +97,26 @@ ul li {
   left: 50%;
   width: 6px;
   height: 100%;
-  background: linear-gradient(to bottom, #00f0ff, transparent);
+  background: linear-gradient(to bottom, #00f0ff, #ff00f0, #00f0ff);
   transform: translateX(-50%);
   z-index: 0;
   border-radius: 3px;
-  animation: pulse 2s infinite;
+  animation: pulseLine 3s ease-in-out infinite;
+}
+
+@keyframes pulseLine {
+  0% {
+    background: #00f0ff;
+    box-shadow: 0 0 10px #00f0ff;
+  }
+  50% {
+    background: #ff00f0;
+    box-shadow: 0 0 20px #ff00f0;
+  }
+  100% {
+    background: #00f0ff;
+    box-shadow: 0 0 10px #00f0ff;
+  }
 }
 
 .step {
@@ -110,10 +126,43 @@ ul li {
   margin-bottom: 70px;
   position: relative;
   z-index: 2;
+  animation: fadeUp 1s ease-in-out;
 }
 
 .step.right {
   justify-content: flex-end;
+}
+
+.step:nth-child(1) .content { animation-delay: 0s; }
+.step:nth-child(2) .content { animation-delay: 0.5s; }
+.step:nth-child(3) .content { animation-delay: 1s; }
+.step:nth-child(4) .content { animation-delay: 1.5s; }
+.step:nth-child(5) .content { animation-delay: 2s; }
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contentGlow {
+  0% {
+    box-shadow: 0 0 0px rgba(255, 0, 255, 0);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(255, 0, 255, 0.8);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(255, 0, 255, 0);
+    transform: scale(1);
+  }
 }
 
 .step .icon {
@@ -121,8 +170,14 @@ ul li {
   border: 2px solid #00f0ff;
   padding: 12px;
   border-radius: 50%;
-  box-shadow: 0 0 20px #00f0ff;
+  box-shadow: 0 0 18px #00f0ff;
   margin: 0 20px;
+  transition: transform 0.3s;
+}
+
+.step .icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #ff00f0;
 }
 
 .step .icon img {
@@ -131,25 +186,21 @@ ul li {
 }
 
 .step .content {
-  background: #0c0f1a;
+  background: linear-gradient(145deg, #0c0f1a 70%, #101828);
   padding: 20px 25px;
   border-radius: 12px;
   color: #fff;
   font-size: 1.1rem;
   width: 300px;
-  box-shadow: 0 0 12px #00f0ff;
+  border-left: 4px solid #ff00f0;
+  transition: 0.4s;
+  animation: contentGlow 2.5s ease-in-out infinite;
 }
 
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 10px #00f0ff;
-  }
-  50% {
-    box-shadow: 0 0 25px #00f0ff;
-  }
-  100% {
-    box-shadow: 0 0 10px #00f0ff;
-  }
+.step .content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px #ff00f0;
+  border-left: 4px solid #ff00f0;
 }
 
 @media (max-width: 768px) {
@@ -238,7 +289,7 @@ a {
     <h1>Game Development 🎮</h1>
 
     <section>
-      <h2>📍 Roadmap</h2>
+      <h2> Roadmap</h2>
       <div class="graphic-roadmap">
         <div class="roadmap-line"></div>
 
