@@ -282,72 +282,80 @@ a {
 }
 
 /* ==== Responsive Styles ==== */
+/* ===== Enhanced Responsive CSS ===== */
+
 @media (max-width: 1024px) {
   h1 {
-    font-size: 2.5rem;
-  }
-
-  section h2 {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
+    text-align: center;
   }
 
   .step .content {
-    width: 80%;
+    width: 90%;
+    font-size: 1.1rem;
   }
 
-  .links a {
-    padding: 10px 16px;
-    font-size: 0.95rem;
+  .video-card iframe {
+    height: 280px;
   }
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2.2rem;
+  section {
+    padding: 15px;
   }
 
-  section {
-    padding: 20px;
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+    text-align: center;
   }
 
   .step {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    margin: 20px 0;
   }
 
-  .step.right {
-    justify-content: center;
+  .step .icon {
+    margin-bottom: 10px;
   }
 
   .step .content {
     width: 90%;
-    font-size: 1rem;
+    text-align: center;
+    padding: 15px;
   }
 
-  .step .icon {
-    margin: 10px 0;
+  .links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .links a {
+    width: 90%;
+    text-align: center;
+    font-size: 0.95rem;
   }
 
   .video-container {
     flex-direction: column;
-    gap: 15px;
-  }
-
-  iframe {
-    width: 100%;
-    height: 200px;
+    align-items: center;
   }
 
   .video-card {
     width: 100%;
+    margin-bottom: 20px;
   }
 
-  .links a {
-    display: block;
+  .video-card iframe {
     width: 100%;
-    text-align: center;
-    margin: 10px 0;
+    height: 220px;
   }
 
   .back-home-btn {
@@ -359,28 +367,33 @@ a {
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   section h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .step .content {
     font-size: 0.95rem;
-    padding: 16px 18px;
+    padding: 12px;
   }
 
   .step .icon img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 
   .links a {
-    font-size: 0.9rem;
-    padding: 8px 14px;
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  .video-card iframe {
+    height: 180px;
   }
 }
+
 
 
 
