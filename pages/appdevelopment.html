@@ -119,6 +119,12 @@ ul li {
   }
 } */
 
+/* Default: Hide the line on all screens */
+.graphic-roadmap::before {
+  display: none;
+}
+
+/* Show the line only on screens wider than 768px */
 @media (min-width: 768px) {
   .graphic-roadmap::before {
     content: '';
@@ -132,6 +138,7 @@ ul li {
     z-index: 0;
     border-radius: 3px;
     animation: pulseLine 3s ease-in-out infinite;
+    display: block;
   }
 }
 
