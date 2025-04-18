@@ -91,17 +91,25 @@ ul li {
 }
 
 .graphic-roadmap::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 6px;
-  height: 100%;
-  background: linear-gradient(to bottom, #00f0ff, #ff00f0, #00f0ff);
-  transform: translateX(-50%);
-  z-index: 0;
-  border-radius: 3px;
-  animation: pulseLine 3s ease-in-out infinite;
+  display: none;
+}
+
+/* Show the line only on screens wider than 768px */
+@media (min-width: 768px) {
+  .graphic-roadmap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #00f0ff, #ff00f0, #00f0ff);
+    transform: translateX(-50%);
+    z-index: 0;
+    border-radius: 3px;
+    animation: pulseLine 3s ease-in-out infinite;
+    display: block;
+  }
 }
 
 @keyframes pulseLine {
@@ -347,6 +355,7 @@ a {
         <li>☁ Deploy a web app on AWS EC2 with NGINX reverse proxy</li>
         <li>📈 Monitor a Node.js app with Prometheus and Grafana</li>
       </ul>
+      <a href="../android.html" class="back-home-btn"> Sample Code</a>b
     </section>
 
     <section>
@@ -356,6 +365,7 @@ a {
         <li>📊 Show improvements in deployment time, error rate, etc.</li>
         <li>🔐 Include security awareness and compliance experience</li>
       </ul>
+      <a href="resume.pdf" class="back-home-btn" download>📄 Download Sample Resume</a>
     </section>
 
     <section>

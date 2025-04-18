@@ -91,17 +91,25 @@ ul li {
 }
 
 .graphic-roadmap::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 6px;
-  height: 100%;
-  background: linear-gradient(to bottom, #00f0ff, #ff00f0, #00f0ff);
-  transform: translateX(-50%);
-  z-index: 0;
-  border-radius: 3px;
-  animation: pulseLine 3s ease-in-out infinite;
+  display: none;
+}
+
+/* Show the line only on screens wider than 768px */
+@media (min-width: 768px) {
+  .graphic-roadmap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #00f0ff, #ff00f0, #00f0ff);
+    transform: translateX(-50%);
+    z-index: 0;
+    border-radius: 3px;
+    animation: pulseLine 3s ease-in-out infinite;
+    display: block;
+  }
 }
 
 @keyframes pulseLine {
@@ -291,27 +299,27 @@ a {
       <div class="graphic-roadmap">
         <div class="roadmap-line"></div>
 
-        <div class="step">
+        <div class="step left">
           <div class="icon"><img src="https://cdn-icons-png.freepik.com/256/17772/17772595.png?ga=GA1.1.1484411714.1744865178&semt=ais_hybrid" alt="Idea Generation"></div>
           <div class="content">Learn how to identify market problems and ideate solutions</div>
         </div>
 
-        <div class="step">
+        <div class="step right">
           <div class="icon"><img src="https://cdn-icons-png.freepik.com/256/15682/15682519.png?ga=GA1.1.1484411714.1744865178&semt=ais_hybrid" alt="Market Research"></div>
           <div class="content">Conduct deep market & competitor research</div>
         </div>
 
-        <div class="step">
+        <div class="step left">
           <div class="icon"><img src="https://cdn-icons-png.freepik.com/256/7111/7111063.png?ga=GA1.1.1484411714.1744865178&semt=ais_hybrid" alt="Business Plan"></div>
           <div class="content">Create a Business Model & MVP</div>
         </div>
 
-        <div class="step">
+        <div class="step right">
           <div class="icon"><img src="https://cdn-icons-png.freepik.com/256/4268/4268455.png?ga=GA1.1.1484411714.1744865178&semt=ais_hybrid" alt="Funding"></div>
           <div class="content">Learn funding methods: Bootstrapping, Angel, VC</div>
         </div>
 
-        <div class="step">
+        <div class="step left">
           <div class="icon"><img src="https://cdn-icons-png.freepik.com/256/2849/2849156.png?ga=GA1.1.1484411714.1744865178&semt=ais_hybrid" alt="Team"></div>
           <div class="content">Build a reliable team and leadership skills</div>
         </div>
@@ -349,6 +357,7 @@ a {
         <li>🧠 Pitch deck for solving a local issue</li>
         <li>📊 Create a business plan for a tech product</li>
       </ul>
+      <a href="../android.html" class="back-home-btn"> Sample Code</a>
     </section>
 
     <section>
@@ -358,6 +367,7 @@ a {
         <li>📂 Link to your startup website or prototype</li>
         <li>🛠 Include entrepreneurial tools: Lean Canvas, MVPs</li>
       </ul>
+      <a href="resume.pdf" class="back-home-btn" download>📄 Download Sample Resume</a>
     </section>
 
     <section>

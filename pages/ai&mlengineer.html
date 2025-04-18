@@ -91,17 +91,25 @@ ul li {
 }
 
 .graphic-roadmap::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 6px;
-  height: 100%;
-  background: linear-gradient(to bottom, #00f0ff, #ff00f0, #00f0ff);
-  transform: translateX(-50%);
-  z-index: 0;
-  border-radius: 3px;
-  animation: pulseLine 3s ease-in-out infinite;
+  display: none;
+}
+
+/* Show the line only on screens wider than 768px */
+@media (min-width: 768px) {
+  .graphic-roadmap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #00f0ff, #ff00f0, #00f0ff);
+    transform: translateX(-50%);
+    z-index: 0;
+    border-radius: 3px;
+    animation: pulseLine 3s ease-in-out infinite;
+    display: block;
+  }
 }
 
 @keyframes pulseLine {
@@ -411,6 +419,7 @@ a {
         <li>📈 Intermediate: Chatbot, Face Recognition App</li>
         <li>🧠 Advanced: Self-driving Simulation, NLP Model Deployment</li>
       </ul>
+      <a href="../android.html" class="back-home-btn"> Sample Code</a>
     </section>
 
     <section>
@@ -420,6 +429,7 @@ a {
         <li>🚀 Highlight deployment skills (Flask, FastAPI, Docker)</li>
         <li>📊 Include project metrics (accuracy, F1 score, inference time)</li>
       </ul>
+      <a href="resume.pdf" class="back-home-btn" download>📄 Download Sample Resume</a>
     </section>
 
     <section>

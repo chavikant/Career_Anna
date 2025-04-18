@@ -91,17 +91,25 @@ ul li {
 }
 
 .graphic-roadmap::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 6px;
-  height: 100%;
-  background: linear-gradient(to bottom, #00f0ff, #ff00f0, #00f0ff);
-  transform: translateX(-50%);
-  z-index: 0;
-  border-radius: 3px;
-  animation: pulseLine 3s ease-in-out infinite;
+  display: none;
+}
+
+/* Show the line only on screens wider than 768px */
+@media (min-width: 768px) {
+  .graphic-roadmap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #00f0ff, #ff00f0, #00f0ff);
+    transform: translateX(-50%);
+    z-index: 0;
+    border-radius: 3px;
+    animation: pulseLine 3s ease-in-out infinite;
+    display: block;
+  }
 }
 
 @keyframes pulseLine {
@@ -118,7 +126,6 @@ ul li {
     box-shadow: 0 0 10px #00f0ff;
   }
 }
-
 .step {
   display: flex;
   align-items: center;
@@ -353,6 +360,7 @@ a {
         <li>🌐 Design a landing page for a fictional product</li>
         <li>🧠 Conduct UX research for a student productivity app</li>
       </ul>
+      <a href="../android.html" class="back-home-btn"> Sample Code</a>
     </section>
 
     <section>
@@ -362,6 +370,7 @@ a {
         <li>📂 Add a portfolio link with case studies</li>
         <li>🛠 Mention tools used and design thinking process</li>
       </ul>
+      <a href="resume.pdf" class="back-home-btn" download>📄 Download Sample Resume</a>
     </section>
 
     <section>
