@@ -6,187 +6,223 @@
   <title>Android Projects</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  background-color: #0c0f1a;
-  font-family: 'Orbitron', sans-serif;
-  color: #00f0ff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-}
+    body {
+      background-color: #0c0f1a;
+      font-family: 'Orbitron', sans-serif;
+      color: #00f0ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
 
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-shadow: 0 0 10px #00f0ff;
-}
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px #00f0ff;
+    }
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  width: 100%;
-}
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
 
-.flip-card {
-  background-color: transparent;
-  width: 280px;
-  height: 320px;
-  perspective: 1000px;
-  flex-shrink: 0;
-}
+    .flip-card {
+      background: transparent;
+      width: 280px;
+      height: 320px;
+      perspective: 1000px;
+    }
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
 
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #00f0ff;
-  border-radius: 20px;
-  padding: 1.5rem;
-  backface-visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-}
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #00f0ff;
+      border-radius: 20px;
+      padding: 1.5rem;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      overflow: hidden;
+    }
 
-.flip-card-front {
-  background-color: #111425;
-}
+    .flip-card-front {
+      background-color: #111425;
+    }
 
-.flip-card-back {
-  background-color: #161b30;
-  transform: rotateY(180deg);
-}
+    .flip-card-back {
+      background-color: #161b30;
+      transform: rotateY(180deg);
+    }
 
-.card-title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
+    .card-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
 
-.project-link {
-  margin: 0.5rem 0;
-  padding: 0.6rem 1rem;
-  background: #00f0ff10;
-  border: 1px solid #00ff99;
-  color: #00ff99;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  width: 100%;
-  text-align: center;
-}
+    .project-toggle {
+      background: #00f0ff;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      color: #000;
+      font-weight: bold;
+      border-radius: 12px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 0.5rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
 
-.project-link:hover {
-  background-color: #00ff99;
-  color: #000;
-  transform: scale(1.05);
-  box-shadow: 0 0 10px #00ff99;
-}
+    .project-toggle:hover {
+      background: #00cce0;
+      box-shadow: 0 0 10px #00f0ff;
+    }
 
-.back-home-btn {
-  display: inline-block;
-  margin-top: 50px;
-  padding: 12px 25px;
-  background-color: #00f0ff;
-  color: #000;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  box-shadow: 0 0 10px #00f0ff;
-  transition: all 0.3s ease;
-}
+    .project-dropdown {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
 
-.back-home-btn:hover {
-  background-color: #0ff;
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00f0ff;
-}
+    .project-block.active .project-dropdown {
+      max-height: 150px;
+      opacity: 1;
+    }
 
-/* Responsive Styling */
-@media (max-width: 1200px) {
-  .flip-card {
-    width: 250px;
-    height: 300px;
-  }
+    .project-dropdown a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #00f0ff10;
+      color: #00f0ff;
+      border: 1px solid #00f0ff;
+      padding: 0.6rem;
+      border-radius: 10px;
+      text-decoration: none;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: bold;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
 
-  h1 {
-    font-size: 2rem;
-  }
-}
+    .project-dropdown a:hover {
+      background-color: #00f0ff;
+      color: #000;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #00f0ff;
+    }
 
-@media (max-width: 900px) {
-  .card-container {
-    flex-direction: column;
-    align-items: center;
-  }
+    .back-home-btn {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 12px 25px;
+      background-color: #00f0ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00f0ff;
+      transition: all 0.3s ease;
+    }
 
-  .flip-card {
-    width: 90%;
-    max-width: 350px;
-    height: 320px;
-  }
+    .back-home-btn:hover {
+      background-color: #0ff;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00f0ff;
+    }
 
-  .card-title {
-    font-size: 1.3rem;
-  }
+    @media (max-width: 1200px) {
+      .flip-card {
+        width: 250px;
+        height: 300px;
+      }
 
-  h1 {
-    font-size: 1.8rem;
-  }
-}
+      h1 {
+        font-size: 2rem;
+      }
+    }
 
-@media (max-width: 600px) {
-  .flip-card {
-    width: 95%;
-    height: 300px;
-  }
+    @media (max-width: 900px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  .card-title {
-    font-size: 1.2rem;
-  }
+      .flip-card {
+        width: 90%;
+        max-width: 350px;
+        height: 320px;
+      }
 
-  .project-link {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-  }
+      .card-title {
+        font-size: 1.3rem;
+      }
 
-  h1 {
-    font-size: 1.5rem;
-  }
-}
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
 
-    
+    @media (max-width: 600px) {
+      .flip-card {
+        width: 95%;
+        height: 300px;
+      }
+
+      .card-title {
+        font-size: 1.2rem;
+      }
+
+      .project-link {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>📱 Android Development Projects</h1>
 
   <div class="card-container">
+
     <!-- Basic -->
     <div class="flip-card">
       <div class="flip-card-inner">
@@ -194,8 +230,20 @@ h1 {
           <div class="card-title">⚙️ Basic Projects</div>
         </div>
         <div class="flip-card-back">
-          <a href="https://github.com/ravi2krishna/JavaCalculator" class="project-link" target="_blank">🧮 Calculator App</a>
-          <a href="https://github.com/yourname/todo-list" class="project-link" target="_blank">📝 To-Do List</a>
+          <div class="project-block">
+            <button class="project-toggle">🧮 Calculator App</button>
+            <div class="project-dropdown">
+              <a href="https://github.com/yourgithub/calculator" target="_blank">🔗 Source Code</a>
+              <a href="https://youtube.com/yourvideo" target="_blank">▶ YouTube Tutorial</a>
+            </div>
+          </div>
+          <div class="project-block">
+            <button class="project-toggle">📝 To-Do List</button>
+            <div class="project-dropdown">
+              <a href="https://github.com/yourname/todo-list" target="_blank">🔗 Source Code</a>
+              <a href="https://youtube.com/yourvideo" target="_blank">▶ YouTube Tutorial</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -207,8 +255,20 @@ h1 {
           <div class="card-title">📱 Intermediate Projects</div>
         </div>
         <div class="flip-card-back">
-          <a href="https://github.com/yourname/weather-app" class="project-link" target="_blank">🌦 Weather App</a>
-          <a href="https://github.com/yourname/notes-app" class="project-link" target="_blank">📓 Notes App w/ Storage</a>
+          <div class="project-block">
+            <button class="project-toggle">🌦 Weather App</button>
+            <div class="project-dropdown">
+              <a href="https://github.com/yourgithub/calculator" target="_blank">🔗 Source Code</a>
+              <a href="https://youtube.com/yourvideo" target="_blank">▶ YouTube Tutorial</a>
+            </div>
+          </div>
+          <div class="project-block">
+            <button class="project-toggle">📓 Notes App with Storage</button>
+            <div class="project-dropdown">
+              <a href="https://github.com/yourname/todo-list" target="_blank">🔗 Source Code</a>
+              <a href="https://youtube.com/yourvideo" target="_blank">▶ YouTube Tutorial</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -220,22 +280,33 @@ h1 {
           <div class="card-title">🚀 Advanced Projects</div>
         </div>
         <div class="flip-card-back">
-          <a href="https://github.com/yourname/chat-firebase" class="project-link" target="_blank">💬 Chat App (Firebase)</a>
-          <a href="https://github.com/yourname/ecommerce-app" class="project-link" target="_blank">🛒 Ecommerce App</a>
+          <div class="project-block">
+            <button class="project-toggle">💬 Chat App (Firebase)</button>
+            <div class="project-dropdown">
+              <a href="https://github.com/yourgithub/calculator" target="_blank">🔗 Source Code</a>
+              <a href="https://youtube.com/yourvideo" target="_blank">▶ YouTube Tutorial</a>
+            </div>
+          </div>
+          <div class="project-block">
+            <button class="project-toggle">🛒 Ecommerce App</button>
+            <div class="project-dropdown">
+              <a href="https://github.com/yourname/todo-list" target="_blank">🔗 Source Code</a>
+              <a href="https://youtube.com/yourvideo" target="_blank">▶ YouTube Tutorial</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 
-  <a href="pages\appdevelopment.html" class="back-home-btn"> Back </a>
+  <a href="pages/appdevelopment.html" class="back-home-btn">Back</a>
 
   <script>
-    // Optional: Add simple click animation
-    const links = document.querySelectorAll('.project-link');
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        link.classList.add('clicked');
-        setTimeout(() => link.classList.remove('clicked'), 200);
+    document.querySelectorAll('.project-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const block = button.parentElement;
+        block.classList.toggle('active');
       });
     });
   </script>
