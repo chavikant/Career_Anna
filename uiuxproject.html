@@ -29,19 +29,22 @@ h1 {
   text-shadow: 0 0 10px #00f0ff;
 }
 
+/* Card Container */
 .card-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
   width: 100%;
 }
 
+/* Flip Card */
 .flip-card {
-  background-color: transparent;
+  background: transparent;
   width: 280px;
   height: 320px;
   perspective: 1000px;
+  margin-bottom: 1rem;
   flex-shrink: 0;
 }
 
@@ -80,34 +83,117 @@ h1 {
 .flip-card-back {
   background-color: #161b30;
   transform: rotateY(180deg);
+  overflow-y: auto;
 }
 
+/* Card Title */
 .card-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-.project-link {
-  margin: 0.5rem 0;
-  padding: 0.6rem 1rem;
-  background: #00f0ff10;
-  border: 1px solid #00ff99;
-  color: #00ff99;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: all 0.3s ease;
+/* Dropdown Button */
+.project-toggle {
+  background: #00f0ff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  color: #000;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
   width: 100%;
-  text-align: center;
+  margin-bottom: 0.5rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.project-link:hover {
-  background-color: #00ff99;
+.project-toggle:hover {
+  background: #00cce0;
+  box-shadow: 0 0 10px #00f0ff;
+}
+
+/* Dropdown Content */
+.project-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-block.active .project-dropdown {
+  max-height: 150px;
+  opacity: 1;
+}
+
+.project-dropdown a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #00f0ff10;
+  color: #00f0ff;
+  border: 1px solid #00f0ff;
+  padding: 0.6rem;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.project-dropdown a::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, #00f0ff40 0%, transparent 60%);
+  animation: pulse-glow 2s infinite;
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes pulse-glow {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.2;
+  }
+}
+
+.project-dropdown a:hover {
+  background-color: #00f0ff;
   color: #000;
   transform: scale(1.05);
-  box-shadow: 0 0 10px #00ff99;
+  box-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff50;
+  z-index: 2;
 }
 
+/* Back Button */
 .back-home-btn {
   display: inline-block;
   margin-top: 50px;
@@ -127,7 +213,8 @@ h1 {
   box-shadow: 0 0 20px #00f0ff;
 }
 
-/* Responsive Styling */
+ /* Responsive Styling */
+
 @media (max-width: 1200px) {
   .flip-card {
     width: 250px;
@@ -180,22 +267,36 @@ h1 {
   }
 }
 
-    
+
+
   </style>
 </head>
 <body>
-  <h1>📱 Android Development Projects</h1>
+  <h1> 🎨 UI/UX Designer  Projects</h1>
 
   <div class="card-container">
+
     <!-- Basic -->
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <div class="card-title">⚙️ Basic Projects</div>
+          <div class="card-title">🛠️ Basic Projects</div>
         </div>
         <div class="flip-card-back">
-          <a href="https://github.com/yourname/calculator-app" class="project-link" target="_blank">🧮 Calculator App</a>
-          <a href="https://github.com/yourname/todo-list" class="project-link" target="_blank">📝 To-Do List</a>
+          <div class="project-block">
+            <button class="project-toggle">📱 Redesign a Popular<br>App Interface</button>
+            <div class="project-dropdown">
+              <a href="https://github.com/yourgithub/calculator" target="_blank">🔗 Source Code</a>
+              <a href="https://youtube.com/yourvideo" target="_blank">▶ YouTube Tutorial</a>
+            </div>
+          </div>
+          <div class="project-block">
+            <button class="project-toggle">🖼️ Build a Personal Portfolio Website</button>
+            <div class="project-dropdown">
+              <a href="https://github.com/yourname/todo-list" target="_blank">🔗 Source Code</a>
+              <a href="https://youtube.com/yourvideo" target="_blank">▶ YouTube Tutorial</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -204,11 +305,23 @@ h1 {
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <div class="card-title">📱 Intermediate Projects</div>
+          <div class="card-title">⚙️ Intermediate Projects</div>
         </div>
         <div class="flip-card-back">
-          <a href="https://github.com/yourname/weather-app" class="project-link" target="_blank">🌦 Weather App</a>
-          <a href="https://github.com/yourname/notes-app" class="project-link" target="_blank">📓 Notes App w/ Storage</a>
+          <div class="project-block">
+            <button class="project-toggle">🧭 Create a Mobile App with Complete User Flow  </button>
+            <div class="project-dropdown">
+              <a href="https://github.com/yourgithub/calculator" target="_blank">🔗 Source Code</a>
+              <a href="https://youtube.com/yourvideo" target="_blank">▶ YouTube Tutorial</a>
+            </div>
+          </div>
+          <div class="project-block">
+            <button class="project-toggle">📋 User Research & Usability Testing<br>for a Local Business Website</button>
+            <div class="project-dropdown">
+              <a href="https://github.com/yourname/todo-list" target="_blank">🔗 Source Code</a>
+              <a href="https://youtube.com/yourvideo" target="_blank">▶ YouTube Tutorial</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -220,24 +333,49 @@ h1 {
           <div class="card-title">🚀 Advanced Projects</div>
         </div>
         <div class="flip-card-back">
-          <a href="https://github.com/yourname/chat-firebase" class="project-link" target="_blank">💬 Chat App (Firebase)</a>
-          <a href="https://github.com/yourname/ecommerce-app" class="project-link" target="_blank">🛒 Ecommerce App</a>
+          <div class="project-block">
+            <button class="project-toggle">🧠 Design a Design System<br>for a SaaS Product </button>
+            <div class="project-dropdown">
+              <a href="https://github.com/yourgithub/calculator" target="_blank">🔗 Source Code</a>
+              <a href="https://youtube.com/yourvideo" target="_blank">▶ YouTube Tutorial</a>
+            </div>
+          </div>
+          <div class="project-block">
+            <button class="project-toggle">🧪 UX Case Study: Solve a Real-World <br>Problem (End-to-End) </button>
+            <div class="project-dropdown">
+              <a href="https://github.com/yourname/todo-list" target="_blank">🔗 Source Code</a>
+              <a href="https://youtube.com/yourvideo" target="_blank">▶ YouTube Tutorial</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 
-  <a href="pages\appdevelopment.html" class="back-home-btn"> Back </a>
+  <a href="pages/uiuxdesigner.html" class="back-home-btn">Back</a>
 
   <script>
-    // Optional: Add simple click animation
-    const links = document.querySelectorAll('.project-link');
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        link.classList.add('clicked');
-        setTimeout(() => link.classList.remove('clicked'), 200);
+    const buttons = document.querySelectorAll('.project-toggle');
+  
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const currentBlock = button.parentElement;
+  
+        // Close any open dropdowns
+        document.querySelectorAll('.project-block.active').forEach(block => {
+          if (block !== currentBlock) {
+            block.classList.remove('active');
+          }
+        });
+  
+        // Toggle the clicked one
+        currentBlock.classList.toggle('active');
       });
     });
   </script>
+  
+
+  
 </body>
 </html>

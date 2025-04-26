@@ -134,6 +134,7 @@ h1 {
 }
 
 .project-dropdown a {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,13 +152,45 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.project-dropdown a::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, #00f0ff40 0%, transparent 60%);
+  animation: pulse-glow 2s infinite;
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes pulse-glow {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.2;
+  }
 }
 
 .project-dropdown a:hover {
   background-color: #00f0ff;
   color: #000;
   transform: scale(1.05);
-  box-shadow: 0 0 10px #00f0ff;
+  box-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff50;
+  z-index: 2;
 }
 
 /* Back Button */
@@ -323,12 +356,26 @@ h1 {
   <a href="pages/appdevelopment.html" class="back-home-btn">Back</a>
 
   <script>
-    document.querySelectorAll('.project-toggle').forEach(button => {
+    const buttons = document.querySelectorAll('.project-toggle');
+  
+    buttons.forEach(button => {
       button.addEventListener('click', () => {
-        const block = button.parentElement;
-        block.classList.toggle('active');
+        const currentBlock = button.parentElement;
+  
+        // Close any open dropdowns
+        document.querySelectorAll('.project-block.active').forEach(block => {
+          if (block !== currentBlock) {
+            block.classList.remove('active');
+          }
+        });
+  
+        // Toggle the clicked one
+        currentBlock.classList.toggle('active');
       });
     });
   </script>
+  
+
+  
 </body>
 </html>
